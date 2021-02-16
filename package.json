@@ -1,10 +1,10 @@
 {
-    "name": "COGS 120 Plantasktic",
+    "name": "cogs-120-plantasktic",
     "version": "0.0.1",
     "author": "Soumya Kalluri, Kelly Lo",
     "repository": {
       "type": "git",
-      "url": "https://github.com/soumyakalluri/plantasktic.git"
+      "url": "https://github.com/soumyakalluri/plantasktic"
     },
     "license": "MIT",
     "private": true,
