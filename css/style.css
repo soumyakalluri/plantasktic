@@ -3,9 +3,35 @@ img {
 }
 
 .navbar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    bottom: 0;
     background-color: white;
     font-family: var(--main-head-font);
+    text-align: center;
+}
+
+.navbar-icon {
+    height: 50px;
+}
+
+main {
+    display: block;
+    float: left;
+}
+
+body {
+    align-items: center;
+    text-align: left;
+    width: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+.grid-item {
+    width: auto;
 }
