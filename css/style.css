@@ -7,7 +7,25 @@ img {
     bottom: 0;
     background-color: white;
     font-family: var(--main-head-font);
-    text-align: center;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+li {
+    float: center;
+}
+
+li a {
+    display: block;
 }
 
 .navbar-icon {
@@ -33,5 +51,10 @@ body {
 }
 
 .grid-item {
-    width: auto;
+    width: 100%;
+    border: 0px solid #949494;
+    font-size: 14px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px; 
 }
