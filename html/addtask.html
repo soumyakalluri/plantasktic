@@ -11,20 +11,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
     <link rel="manifest" href="../images/favicon/site.webmanifest">
     <link rel="stylesheet" href="../css/addtask.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../js/addtask.js"></script>
 
 </head>
 <body>
-    <h1>
+    <h1 id="addTaskHeader">
         Add a Task
     </h1>
 
     <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form-->
-    <form>
+    <form class="addTaskForm">
         <label for="taskName">Task Name:</label>
         <input type="text" id="taskName" name="task_name" placeholder="Task">
         
         <label for="taskDescription">Task Description:</label>
-        <textarea type="text" id="taskDescription" name="task_description" placeholder="Description"></textarea>
+        <textarea type="text" class="taskDescription" id="taskDescription" name="task_description" placeholder="Description"></textarea>
         
         <label for="completeBy">Complete By:</label><br>
         <input type="date" id="completeBy" name="complete-by"><br>
