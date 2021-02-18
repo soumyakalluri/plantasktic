@@ -10,13 +10,32 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
     <link rel="manifest" href="../images/favicon/site.webmanifest">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/addtask.css">
 
 </head>
 <body>
     <h1>
-        Welcome to Plantasktic!
+        Add a Task
     </h1>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form-->
+    <form>
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" name="task_name" placeholder="Task">
+        
+        <label for="taskDescription">Task Description:</label>
+        <textarea type="text" id="taskDescription" name="task_description" placeholder="Description"></textarea>
+        
+        <label for="completeBy">Complete By:</label><br>
+        <input type="date" id="completeBy" name="complete-by"><br>
+
+        <!-- For future references: https://stackoverflow.com/questions/309081/how-do-you-create-a-toggle-button -->
+        <label for="favoriteButton">Important:</label>
+        <input type="checkbox" id="favoriteButton" name="favorite-button">
+
+        <input id="cancel" type="button" value="Cancel">
+        <input id="save" type="button" value="Save">
+    </form>
 
     <!-- navigation bar
     <div id="navbar" class="grid-item navbar">
@@ -39,7 +58,6 @@
         </nav>
     </div> -->
 
-    <p>This is a very cool task app yaay</p>
-    <img src="https://i.kym-cdn.com/entries/icons/mobile/000/012/917/MOONMOON.jpg" alt="https://i.kym-cdn.com/entries/icons/mobile/000/012/917/MOONMOON.jpg">
+    
 </body>
 </html>
