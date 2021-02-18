@@ -1,5 +1,11 @@
+#addTaskHeader {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
 label {
     font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input[type=text], select, textarea {
@@ -12,6 +18,7 @@ input[type=text], select, textarea {
     margin-bottom: 10px;
     resize: vertical;
     font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input[type=date] {
@@ -24,6 +31,7 @@ input[type=date] {
     margin-bottom: 10px;
     resize: vertical;
     font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input[type=button] {

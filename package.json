@@ -1,21 +1,21 @@
 {
-    "name": "cogs-120-plantasktic",
-    "version": "0.0.1",
-    "author": "Soumya Kalluri, Kelly Lo",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/soumyakalluri/plantasktic"
-    },
-    "license": "MIT",
-    "private": true,
-    "scripts": {
-      "start": "node app.js"
-    },
-    "dependencies": {
-      "express": "3.x",
-      "express3-handlebars": "*"
-    },
-    "engines": {
-      "node": "0.10.x"
-    }
+  "name": "cogs-120-plantasktic",
+  "version": "0.0.1",
+  "author": "Soumya Kalluri, Kelly Lo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soumyakalluri/plantasktic"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "express3-handlebars": "*"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
+}
