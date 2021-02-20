@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantasktic</title>
+
+    <!-- favicon stuff -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+
+</head>
+<body>
+    <h1>
+        Welcome to Plantasktic!
+    </h1>
+
+    <div class="grid-container">
+
+        <div id="navbar" class="grid-item navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/error/">Garden</a></li>
+                <li><a href="/addtask/">Add Task</a></li>
+                <li><a href="/error/">Shop</a></li>
+                <li><a href="/error/">Settings</a></li>
+            </ul>
+        </div>
+        <main class="grid-item">
+            <p>Important tasks below this line</p>
+            <div class="grey-line"></div>
+
+            {{#each imptasks}}
+
+            {{/each}}
+
+            <p>Everything else here</p>
+            <div class="grey-line"></div>
+            <!-- <img src="../images/moonnoom.jpg" alt="../images/moonnoom.jpg"> -->
+
+        </main>
+    </div>
+    <!-- navigation bar
+    <div id="navbar" class="grid-item navbar">
+        <nav>
+            <a href="#about">about me</a>
+            |
+            <a href="#education">education</a>
+            |
+            <a href="#internships">internships</a>
+            |
+            <a href="#experience">relevant experience</a>
+            |
+            <a href="#leadership">leadership</a>
+            |
+            <a href="#skills">skills</a>
+            |
+            <a href="#extra">extracurriculars</a>
+            |
+            <a href="#contact">contact</a>
+        </nav>
+    </div> -->
+
+    <!-- <p>This is a very cool task app yaay</p> -->
+    <!-- <img src="https://i.kym-cdn.com/entries/icons/mobile/000/012/917/MOONMOON.jpg" alt="https://i.kym-cdn.com/entries/icons/mobile/000/012/917/MOONMOON.jpg"> -->
+</body>
+</html>
