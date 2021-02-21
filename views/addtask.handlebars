@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
     <link rel="manifest" href="../images/favicon/site.webmanifest"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
     <link rel="stylesheet" type="text/css" href="/css/addtask.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/addtask.js"></script>
@@ -21,7 +22,7 @@
     </h1>
 
     <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form-->
-    <form class="addTaskForm">
+    <form class="addTaskForm" id="addTaskForm">
         <label for="taskName">Task Name:</label>
         <input type="text" id="taskName" name="task_name" placeholder="Task">
         
@@ -32,34 +33,14 @@
         <input type="date" id="completeBy" name="complete-by"><br>
 
         <!-- For future references: https://stackoverflow.com/questions/309081/how-do-you-create-a-toggle-button -->
-        <label for="favoriteButton">Important:</label>
+        <!-- Reference: https://codepen.io/sunny-lella/pen/dXkLjb -->
+        <label>Important:</label>
         <input type="checkbox" id="favoriteButton" name="favorite-button">
+        <label for="favoriteButton" id="heartIcon">❤</label>
 
         <input id="cancel" type="button" value="Cancel" onclick="location.href='/'">
-        <input id="save" type="button" value="Save">
+        <input id="save" type="submit" value="Save">
     </form>
-
-    <!-- navigation bar
-    <div id="navbar" class="grid-item navbar">
-        <nav>
-            <a href="#about">about me</a>
-            |
-            <a href="#education">education</a>
-            |
-            <a href="#internships">internships</a>
-            |
-            <a href="#experience">relevant experience</a>
-            |
-            <a href="#leadership">leadership</a>
-            |
-            <a href="#skills">skills</a>
-            |
-            <a href="#extra">extracurriculars</a>
-            |
-            <a href="#contact">contact</a>
-        </nav>
-    </div> -->
-
     
 </body>
 </html>

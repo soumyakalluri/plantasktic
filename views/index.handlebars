@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
     <link rel="manifest" href="../images/favicon/site.webmanifest"> -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/index.js"></script>
+    {{!-- <script src="js/index.js"></script> --}}
 
 </head>
 <body>
@@ -34,8 +34,16 @@
             <p>Important tasks below this line</p>
             <div class="grey-line"></div>
 
-            {{#each imptasks}}
-
+            {{#each users}}
+                <div class="task">
+                    <h3>{{username}}</h3>
+                    <p>{{password}}</p>
+                    {{!-- <p>{{imptasks}}</p> --}}
+                    {{#each imptasks}}
+                    <h3>{{taskName}}</h3>
+                    {{/each}}
+                    {{!-- <p>{{</p> --}}
+                </div>
             {{/each}}
 
             <p>Everything else here</p>

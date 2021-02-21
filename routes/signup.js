@@ -1,9 +1,9 @@
 var database = require('../public/database/database.json');
 
 /*
- * GET error page.
+ * GET sign up page.
  */
 
 exports.view = function(req, res){
-	res.render('error');
+	res.render('signup');
 };

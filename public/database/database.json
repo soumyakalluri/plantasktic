@@ -3,40 +3,42 @@
         {
             "username": "soumya",
             "password": "1234",
+            "coins": 126,
             "imptasks": [
                 {
-                    "name": "go poo",
-                    "desc": "don't forget to go poopoo",
-                    "date": "2021-02-21T18:25:43.511Z",
-                    "imp": true
+                    "taskName": "go poo",
+                    "taskDesc": "don't forget to go poopoo",
+                    "taskDate": "2021-02-21T18:25:43.511Z",
+                    "important": true
                 }
             ],
             "regtasks": [
                 {
-                    "name": "do hw",
-                    "desc": "cogs 120 hw",
-                    "date": "2021-02-21T18:25:43.511Z",
-                    "imp": false
+                    "taskName": "do hw",
+                    "taskDesc": "cogs 120 hw",
+                    "taskDate": "2021-02-21T18:25:43.511Z",
+                    "important": false
                 }
             ]
         },
         {
             "username": "kelly",
             "password": "5678",
+            "coins": 11,
             "imptasks": [
                 {
-                    "name": "do hw",
-                    "desc": "cogs 120 hw",
-                    "date": "2021-02-21T18:25:43.511Z",
-                    "imp": false
+                    "taskName": "do hw",
+                    "taskDesc": "cogs 120 hw",
+                    "taskDate": "2021-02-21T18:25:43.511Z",
+                    "important": false
                 }
             ],
             "regtasks": [
                 {
-                    "name": "go poo",
-                    "desc": "don't forget to go poopoo",
-                    "date": "2021-02-21T18:25:43.511Z",
-                    "imp": true
+                    "taskName": "go poo",
+                    "taskDesc": "don't forget to go poopoo",
+                    "taskDate": "2021-02-21T18:25:43.511Z",
+                    "important": true
                 }
             ]
         }
