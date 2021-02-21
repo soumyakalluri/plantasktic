@@ -1,11 +1,12 @@
 #addTaskHeader {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Rubik, sans-serif;
     text-align: center;
+    color: #5AAAAF;
 }
 
 label {
     font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Rubik, sans-serif;
 }
 
 input[type=text], select, textarea {
@@ -18,7 +19,7 @@ input[type=text], select, textarea {
     margin-bottom: 10px;
     resize: vertical;
     font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Rubik, sans-serif;
 }
 
 input[type=date] {
@@ -31,10 +32,10 @@ input[type=date] {
     margin-bottom: 10px;
     resize: vertical;
     font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Rubik, sans-serif;
 }
 
-input[type=button] {
+#save, #cancel {
     display: inline-block;
     width: 50%;
     padding: 15px;
@@ -48,12 +49,38 @@ input[type=button] {
     bottom: 0px;
     left: 0%;
     background-color: white;
+    color: #5AAAAF;
+    font-family: Rubik, sans-serif;
 }
 
 #save {
     position: absolute;
     bottom: 0px;
     left: 50%;
-    background-color: #000000;
+    background-color: #5AAAAF;
     color: white;
+    font-family: Rubik, sans-serif;
+}
+
+[id="favoriteButton"] {
+    position: absolute;
+    left: -100vw;
+}
+  
+[for="favoriteButton"] {
+    color: #aab8c2;
+    cursor: pointer;
+    font-size: 25px;
+    align-self: center;  
+    transition: color 0.2s ease-in-out;
+}
+    
+[for="favoriteButton"]::selection {
+    color: none;
+    background: transparent;
+}
+  
+[id="favoriteButton"]:checked + label {
+    color: #e2264d;
+    will-change: font-size;
 }

@@ -1,0 +1,46 @@
+{
+    "users" : [
+        {
+            "username": "soumya",
+            "password": "1234",
+            "coins": 126,
+            "imptasks": [
+                {
+                    "taskName": "go poo",
+                    "taskDesc": "don't forget to go poopoo",
+                    "taskDate": "2021-02-21T18:25:43.511Z",
+                    "important": true
+                }
+            ],
+            "regtasks": [
+                {
+                    "taskName": "do hw",
+                    "taskDesc": "cogs 120 hw",
+                    "taskDate": "2021-02-21T18:25:43.511Z",
+                    "important": false
+                }
+            ]
+        },
+        {
+            "username": "kelly",
+            "password": "5678",
+            "coins": 11,
+            "imptasks": [
+                {
+                    "taskName": "do hw",
+                    "taskDesc": "cogs 120 hw",
+                    "taskDate": "2021-02-21T18:25:43.511Z",
+                    "important": false
+                }
+            ],
+            "regtasks": [
+                {
+                    "taskName": "go poo",
+                    "taskDesc": "don't forget to go poopoo",
+                    "taskDate": "2021-02-21T18:25:43.511Z",
+                    "important": true
+                }
+            ]
+        }
+    ]
+}

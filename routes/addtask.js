@@ -1,7 +1,7 @@
-var database = require('../database.json');
+var database = require('../public/database/database.json');
 
 /*
- * GET home page.
+ * GET add task page.
  */
 
 exports.view = function(req, res){
