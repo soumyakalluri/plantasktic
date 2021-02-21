@@ -6,40 +6,90 @@
     <title>Plantasktic</title>
 
     <!-- favicon stuff -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../images/favicon/site.webmanifest"> -->
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/index.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+        rel="stylesheet"
+    />
 
 </head>
-<body>
-    <h1>
-        Welcome to Plantasktic!
-    </h1>
+<body class="genformat">
 
     <div class="grid-container">
+        <h1 class="title">My Tasks</h1>
 
         <div id="navbar" class="grid-item navbar">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/error/">Garden</a></li>
-                <li><a href="/addtask/">Add Task</a></li>
-                <li><a href="/error/">Shop</a></li>
-                <li><a href="/error/">Settings</a></li>
+                <li>
+                    <a href="/">
+                        <img class="navbar-icon" src="/images/house-icon.png">
+                        <br>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/error/">
+                        <img class="navbar-icon" src="/images/garden-icon.png">
+                        <br>
+                        Garden
+                    </a>
+                </li>
+                <li>
+                    <a href="/addtask/">
+                        <img class="navbar-icon" src="/images/addtask-icon.png">
+                        <br>
+                        Add Task 
+                    </a>
+                </li>
+                <li>
+                    <a href="/error/">
+                        <img class="navbar-icon" src="/images/shop-icon.png">
+                        <br>
+                        Shop 
+                    </a>
+                </li>
+                <li>
+                    <a href="/error/">
+                        <img class="navbar-icon" src="/images/settings-icon.png">
+                        <br>
+                        Settings 
+                    </a>
+                </li>
             </ul>
         </div>
         <main class="grid-item">
-            <p>Important tasks below this line</p>
-            <div class="grey-line"></div>
+            
+            <h2 class="task-heading">
+                <img src="/images/collapsible-icon.png">
+                Important Tasks
+            </h2>
+            <div class="blue-line"></div>
 
-            {{#each imptasks}}
-
+            {{#each users}}
+                <div class="task grid-item">
+                    {{#each imptasks}}
+                        {{!-- <input type="checkbox" class="checkbox-round"> --}}
+                        <h3 class="task-name grid-item">{{taskName}}</h3>
+                    {{/each}}
+                </div>
             {{/each}}
 
-            <p>Everything else here</p>
-            <div class="grey-line"></div>
+            <h2 class="task-heading">
+                <img src="/images/collapsible-icon.png">
+                Everything else
+            </h2>
+            <div class="blue-line grid-item"></div>
+            {{#each users}}
+                <div class="task grid-item">
+                    {{#each imptasks}}
+                    <h3 class="task-name grid-item">{{taskName}}</h3>
+                    {{/each}}
+                </div>
+            {{/each}}
             <!-- <img src="../images/moonnoom.jpg" alt="../images/moonnoom.jpg"> -->
 
         </main>

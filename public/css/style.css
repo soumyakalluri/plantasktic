@@ -1,46 +1,27 @@
-img {
-    width: 80%;
+@font-face{
+    font-family: "Rubik";
+    src: "https://fonts.googleapis.com/css2?family=Rubik&display=swap"
 }
 
-.navbar {
-    position: fixed;
-    bottom: 0;
-    background-color: white;
-    font-family: var(--main-head-font);
-    width: 100%;
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
-ul {
-    list-style-type: none;
-    margin: 5px;
+.genformat {
+    align-items: center;
+    text-align: left;
+    width: auto;
+    background-image: linear-gradient(#5AAAAF, #9CDDC2);
+    color: white;
+    font-family: "Rubik";
+    margin: 0;
     padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-}
-
-li {
-    float: center;
-}
-
-li a {
-    display: block;
-}
-
-.navbar-icon {
-    height: 50px;
 }
 
 main {
     display: block;
     float: left;
-}
-
-body {
-    align-items: center;
-    text-align: left;
-    width: auto;
 }
 
 .grid-container {
@@ -59,10 +40,121 @@ body {
     margin: 0px; 
 }
 
-.grey-line {
-    background-color: #949494;
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Rubik";
+}
+
+.task-heading {
+    text-align: left;
+    font-size: 24px;
+    font-family: "Rubik";
+    margin: 0px;
+    padding: 5px 25px;
+}
+
+.blue-line {
+    background-color: #5AAAAF;
     display: inline-block;
     vertical-align: middle;
-    width: 25%;
-    height: 2px;
+    width: 90%;
+    height: 1px;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: #E5FFF4;
+}
+
+li {
+    float: center;
+    width: 20%;
+}
+
+li a {
+    display: block;
+    color: #545454;
+}
+
+.task {
+    display: block;
+    background-color: white;
+    opacity: 0.85;
+    color: #474747;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-radius: 5px; /* Rounded borders */
+    box-shadow: 0 4px 8px 0 rgba(150, 150, 150, 0.25), 0 6px 20px 0 rgba(150, 150, 150, 0.25);
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.task-name {
+    font-size: 20px;
+    font-family: "Rubik";
+    color: #474747;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.navbar-icon {
+    height: 55px;
+    width: 55px;
+}
+
+/* .garden-icon {
+    height: 45px;
+    width: 45px;
+}
+
+
+.addtask-icon {
+    height: 55px;
+    width: 55px;
+}
+
+
+.shop-icon {
+    height: 55px;
+    width: 55px;
+}
+
+.settings-icon {
+    height: 55px;
+    width: 55px;
+} */
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    font-family: var(--main-head-font);
+    width: 100%;
+}
+
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color: gray;
 }

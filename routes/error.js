@@ -1,4 +1,4 @@
-var database = require('../public/database/database.json');
+var database = require('../database.json');
 
 /*
  * GET home page.

@@ -1,9 +1,10 @@
-var database = require('../public/database/database.json');
+var database = require('../database.json');
 
 /*
  * GET home page.
  */
 
 exports.view = function(req, res){
-	res.render('index');
+	console.log(database);
+	res.render('index', database);
 };
