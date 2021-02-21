@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
         rel="stylesheet"
     />
-    {{!-- <script src="js/index.js"></script> --}}
+    <script src="/js/index.js"></script>
 
 </head>
 <body class="genformat">
@@ -68,55 +68,27 @@
                 <img src="/images/collapsible-icon.png">
                 Important Tasks
             </h2>
-            <div class="blue-line"></div>
-
-            {{#each users}}
-                <div class="task grid-item">
-                    {{#each imptasks}}
-                        {{!-- <input type="checkbox" class="checkbox-round"> --}}
-                        <h3 class="task-name grid-item">{{taskName}}</h3>
-                    {{/each}}
-                </div>
-            {{/each}}
+            <div class="blue-line grid-item"></div>
+            <div class="task grid-item" onclick="viewTask()">
+                {{#each imptasks}}
+                    {{!-- <input type="checkbox" class="checkbox-round"> --}}
+                    <h3 class="task-name grid-item">{{taskName}}</h3>
+                {{/each}}
+            </div>
 
             <h2 class="task-heading">
                 <img src="/images/collapsible-icon.png">
                 Everything else
             </h2>
             <div class="blue-line grid-item"></div>
-            {{#each users}}
-                <div class="task grid-item">
-                    {{#each imptasks}}
-                    <h3 class="task-name grid-item">{{taskName}}</h3>
-                    {{/each}}
-                </div>
-            {{/each}}
-            <!-- <img src="../images/moonnoom.jpg" alt="../images/moonnoom.jpg"> -->
+            <div class="task grid-item">
+                {{#each regtasks}}
+                <h3 class="task-name grid-item">{{taskName}}</h3>
+                {{/each}}
+            </div>
 
         </main>
     </div>
-    <!-- navigation bar
-    <div id="navbar" class="grid-item navbar">
-        <nav>
-            <a href="#about">about me</a>
-            |
-            <a href="#education">education</a>
-            |
-            <a href="#internships">internships</a>
-            |
-            <a href="#experience">relevant experience</a>
-            |
-            <a href="#leadership">leadership</a>
-            |
-            <a href="#skills">skills</a>
-            |
-            <a href="#extra">extracurriculars</a>
-            |
-            <a href="#contact">contact</a>
-        </nav>
-    </div> -->
 
-    <!-- <p>This is a very cool task app yaay</p> -->
-    <!-- <img src="https://i.kym-cdn.com/entries/icons/mobile/000/012/917/MOONMOON.jpg" alt="https://i.kym-cdn.com/entries/icons/mobile/000/012/917/MOONMOON.jpg"> -->
 </body>
 </html>

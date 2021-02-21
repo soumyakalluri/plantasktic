@@ -3,7 +3,6 @@ var database = require('../public/database/database.json');
 /*
  * GET home page.
  */
-
 exports.view = function(req, res){
 	// console.log(database);
 	// First item in the database will be a default one that we will fall back on when users enter a username not found
@@ -27,5 +26,10 @@ exports.view = function(req, res){
 	}
 
 	console.log("Passing to render: ", userName);
-	res.render('index', database);
+	res.render('index', userName);
 };
+
+exports.userInfo = function(request, response) {
+	console.log("this is the response in index.js" + request.params);
+	// var user = database.users[]
+}
