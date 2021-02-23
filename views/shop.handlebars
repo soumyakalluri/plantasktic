@@ -6,23 +6,36 @@
     <title>Plantasktic</title>
 
     <!-- favicon stuff -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
-    <link rel="stylesheet" href="/css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
-        rel="stylesheet"
-    />
-    <script src="/js/index.js"></script>
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" type="text/css" href="/css/shop.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/shop.js"></script>
 
 </head>
 <body class="genformat">
+    <div class="container">
+        <h1 id="shopHeader">Shop</h1>
+        <h2 id="amountOfCoins">Coins: 10</h2> 
 
-    <div class="grid-container">
-        <h1 class="title">My Tasks</h1>
+        {{#each plants}}
+            <div id="plant-item plantItem" class="plant-item inventory-container">
+                <h3 id="plantName" class="plant-name inventory-item">{{plantName}}</h3>
+                <h3 class="plant-cost inventory-item">Cost: {{cost}}</h3>
+                <div id="buyButtonContainer">
+                    <input id="buyButton" class="buyButton" type="button" value="Buy">
+                    <div id="hideThese">
+                        <p id="buyPlant">{{plantName}}</p>
+                        <p id="buyCost">{{cost}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
 
+        <!-- navigation bar -->
         <div id="navbar" class="grid-item navbar">
             <ul>
                 <li>
@@ -62,33 +75,5 @@
                 </li>
             </ul>
         </div>
-        <main class="grid-item">
-            
-            <h2 class="task-heading">
-                <img src="/images/collapsible-icon.png">
-                Important Tasks
-            </h2>
-            <div class="blue-line grid-item"></div>
-            <div class="task grid-item" onclick="viewTask()">
-                {{#each imptasks}}
-                    {{!-- <input type="checkbox" class="checkbox-round"> --}}
-                    <h3 class="task-name grid-item">{{taskName}}</h3>
-                {{/each}}
-            </div>
-
-            <h2 class="task-heading">
-                <img src="/images/collapsible-icon.png">
-                Everything else
-            </h2>
-            <div class="blue-line grid-item"></div>
-            <div class="task grid-item">
-                {{#each regtasks}}
-                <h3 class="task-name grid-item">{{taskName}}</h3>
-                {{/each}}
-            </div>
-
-        </main>
     </div>
-
-</body>
 </html>

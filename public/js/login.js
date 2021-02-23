@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 var database = [];
 $.getJSON('../database/database.json', function(data) {
     database = data.users;
@@ -40,7 +40,7 @@ function login(e) {
             if (user['password'] == passwordToCheck) {
                 console.log("Found password: " + passwordToCheck);
                 var projectURL = "/" + userToCheck + "/";
-                $.get(projectURL, callback);
+                // $.get(projectURL, callback);
             } else {
                 console.log("incorrect password");
             }

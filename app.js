@@ -13,6 +13,7 @@ var addtask = require('./routes/addtask');
 var error = require('./routes/error');
 var login = require('./routes/login');
 var signup = require('./routes/signup');
+var shop = require('./routes/shop');
 var database = require('./public/database/database.json');
 
 // initialize app
@@ -44,6 +45,7 @@ app.get('/addtask/', addtask.view);
 app.get('/error/', error.view);
 app.get('/login/', login.view);
 app.get('/signup/', signup.view);
+app.get('/shop/', shop.view);
 app.get('/:username/', index.userInfo);
 // Example route
 // app.get('/users', user.list);

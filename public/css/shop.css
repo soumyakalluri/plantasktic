@@ -1,0 +1,128 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#amountOfCoins {
+    text-align: right;
+    font-size: 20px;
+    font-family: "Rubik";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#shopHeader {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Rubik";
+}
+
+.genformat {
+    align-items: center;
+    text-align: left;
+    width: auto;
+    background-image: linear-gradient(#5AAAAF, #9CDDC2);
+    color: white;
+    font-family: "Rubik";
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+.grid-item {
+    width: 100%;
+    border: 0px solid #949494;
+    font-size: 14px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: #E5FFF4;
+}
+
+li {
+    float: center;
+    width: 20%;
+}
+
+li a {
+    display: block;
+    color: #545454;
+}
+
+.navbar-icon {
+    height: 55px;
+    width: 55px;
+}
+
+.inventory-item {
+    margin-left: 20px;
+    display: inline;
+    color:  black;
+    margin-right: 100px;
+}
+
+.plant-cost {
+    margin-right: 10px;
+    position: relative;
+    right: 0px;
+}
+
+.buyButton {
+    height: 30px;
+    width: 60px;
+    position: absolute;
+    right: 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+
+.inventory-container {
+    padding: 15px;
+    display: block;
+    width: 90%;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    font-family: var(--main-head-font);
+    width: 100%;
+}
+
+.buyPlant .buyButton {
+    visibility: hidden;
+    position: absolute;
+    left: -999em;
+    display: none;
+    max-height: 0;
+    max-width: 0;
+    font-size: 0;
+    /* display: inline; */
+}
+
+.buyButtonContainer {
+    display: inline;
+    overflow: hidden;
+}
+
+.hideThese {
+    display: none;
+}
