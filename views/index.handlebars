@@ -15,6 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
         rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/index.js"></script>
 
 </head>
@@ -27,13 +28,13 @@
             <ul>
                 <li>
                     <a href="/">
-                        <img class="navbar-icon" src="/images/house-icon.png">
+                        <img class="navbar-icon" src="/images/selected-home-icon.png">
                         <br>
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="/error/">
+                    <a href="/garden/">
                         <img class="navbar-icon" src="/images/garden-icon.png">
                         <br>
                         Garden
@@ -69,23 +70,25 @@
                 Important Tasks
             </h2>
             <div class="blue-line grid-item"></div>
-            <div class="task grid-item" onclick="viewTask()">
-                {{#each imptasks}}
+            {{#each imptasks}}
+                <div class="task grid-item" onclick="viewTask()">
                     {{!-- <input type="checkbox" class="checkbox-round"> --}}
-                    <h3 class="task-name grid-item">{{taskName}}</h3>
-                {{/each}}
-            </div>
+                    <img id="impcheckbox" class="checkbox" src="/images/checkbox-empty.png">
+                    <h3 id="taskname" class="task-name grid-item">{{taskName}}</h3>
+                </div>
+            {{/each}}
 
             <h2 class="task-heading">
                 <img src="/images/collapsible-icon.png">
                 Everything else
             </h2>
             <div class="blue-line grid-item"></div>
-            <div class="task grid-item">
-                {{#each regtasks}}
-                <h3 class="task-name grid-item">{{taskName}}</h3>
-                {{/each}}
-            </div>
+            {{#each regtasks}}
+                <div class="task grid-item">
+                    <img id="regcheckbox" class="checkbox" src="/images/checkbox-empty.png">
+                    <h3 id="taskname" class="task-name grid-item">{{taskName}}</h3>
+                </div>
+            {{/each}}
 
         </main>
     </div>

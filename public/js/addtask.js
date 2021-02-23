@@ -27,7 +27,7 @@ function saveTask(e) {
     };
 
     console.log(task);
-    
+
     if (taskName.val() == "") {
         console.error("Task name is required. Please enter a task name.");
         alert("Please enter a task name.");

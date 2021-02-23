@@ -48,6 +48,8 @@ function login(e) {
             console.log("could not find user");
         }
 	}
+
+    document.location.href = "/";
 }
 
 // /*
@@ -68,10 +70,10 @@ function login(e) {
 // 	$.get(projectURL, callback);
 // }
 
-function callback(result) {
+// function callback(result) {
 	// Prevent following the link
 	// console.log(result);
-	var loginHTML = '';
+	// var loginHTML = '';
 
 	// $("#project" + result['id'] + " .details").html(loginHTML);
-}
+// }

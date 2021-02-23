@@ -14,6 +14,7 @@ var error = require('./routes/error');
 var login = require('./routes/login');
 var signup = require('./routes/signup');
 var shop = require('./routes/shop');
+var garden = require('./routes/garden');
 var database = require('./public/database/database.json');
 
 // initialize app
@@ -46,7 +47,8 @@ app.get('/error/', error.view);
 app.get('/login/', login.view);
 app.get('/signup/', signup.view);
 app.get('/shop/', shop.view);
-app.get('/:username/', index.userInfo);
+app.get('/garden/', garden.view);
+// app.get('/:username/', index.userInfo);
 // Example route
 // app.get('/users', user.list);
 
