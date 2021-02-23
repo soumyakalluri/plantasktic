@@ -27,13 +27,23 @@
                 <h3 class="plant-cost inventory-item">Cost: {{cost}}</h3>
                 <div id="buyButtonContainer">
                     <input id="buyButton" class="buyButton" type="button" value="Buy">
-                    <div id="hideThese">
-                        <p id="buyPlant">{{plantName}}</p>
-                        <p id="buyCost">{{cost}}</p>
-                    </div>
+                    <p id="buyPlant">{{plantName}}/{{srcImg}}</p>
+                    <p id="buyCost">{{cost}}</p>
+                    {{!-- </input> --}}
+                    {{!-- <div id="hideThese"> --}}
+                        {{!-- <p id="buyPlant">{{plantName}}</p>
+                        <p id="buyCost">{{cost}}</p> --}}
+                    {{!-- </div> --}}
                 </div>
             </div>
         {{/each}}
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="purchaseConfirmation">You purchased</p>
+            </div>
+        </div>
 
         <!-- navigation bar -->
         <div id="navbar" class="grid-item navbar">

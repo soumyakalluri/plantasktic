@@ -1,18 +1,18 @@
 {
     "plants": [
         {
-            "plantName": "Daisy",
-            "imageLink": "https://pixy.org/src/425/thumbs350/4250611.jpg",
+            "plantName": "Blue Rose",
+            "srcImg": "blue-rose",
             "cost": 5
         },
         {
-            "plantName": "Sunflower",
-            "imageLink": "https://images-na.ssl-images-amazon.com/images/I/61TjubkLJpL._AC_SY355_.jpg",
-            "cost": 10
+            "plantName": "White Rose",
+            "srcImg": "white-rose",
+            "cost": 15
         },
         {
-            "plantName": "Bamboo",
-            "imageLink": "https://cdn0.iconfinder.com/data/icons/china-icons-set-cartoon-style/512/a463-512.png",
+            "plantName": "Red Rose",
+            "srcImg": "red-rose",
             "cost": 15
         }
     ]

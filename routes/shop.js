@@ -1,13 +1,13 @@
 var database = require('../public/database/plantinventory.json');
+var userDatabase = require('../public/database/database.json');
+var fs = require('fs');
 
 /*
- * GET home page.
+ * GET shop page.
  */
 exports.view = function(req, res){
 	console.log(database);
-	// First item in the database will be a default one that we will fall back on when users enter a username not found
 	
-	// TODO: Fix the userToLookFor
     var plantInventory = [];
     console.log("Loading plant inventory...");
     for (var idx in database.plants) {
@@ -18,3 +18,12 @@ exports.view = function(req, res){
 
 	res.render('shop', database);
 };
+
+exports.purchasedPlant = function(req, res) {
+    console.log(req.body);
+    let users = JSON.stringify(req.body);
+    fs.writeFileSync('./public/database/test.json', users);
+    // res.send("Saved!");
+    res.end();
+    // res.render('garden', database);
+}

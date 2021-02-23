@@ -35,14 +35,26 @@ function saveTask(e) {
     } else {
         // Save to database
         // Add logic to add to JSON file here
-        
+        // var myURL = "/";
+        // $.get(myURL, callBackFn);
         // Clear fields
         // document.getElementById("addTaskForm").value = "";
         document.getElementById("taskName").value = "";
         document.getElementById("taskDescription").value = "";
         document.getElementById("completeBy").value = "";
         document.getElementById("favoriteButton").checked = false;
-        document.location.href = "/";
+        $.post('addedTask', task, function(req, res) {
+            console.log("Added task");
+            document.location.href = "/";
+        });
     }
 
+}
+
+function callBackFn(result) {
+    console.log(result);
+    var taskHTML = '<div class="task grid-item" onclick="viewTask()">' +
+                    '<img id="impcheckbox" class="checkbox" src="/images/checkbox-empty.png">' +
+                    '<h3 id="taskname" class="task-name grid-item">' + 'Task Name' + '</h3> </div>';
+    $()
 }
