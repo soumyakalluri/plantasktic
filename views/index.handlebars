@@ -64,14 +64,28 @@
             </ul>
         </div>
         <main class="grid-item">
-            
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Would you like to view/edit or check off this task?</p>
+                    <p id="del-task"></p>
+                    <button id="viewBtn">View/Edit</button>
+                    <button id="checkBtn">Check Off</button>
+                </div>
+                
+            </div>
+
             <h2 class="task-heading">
                 <img src="/images/collapsible-icon.png">
                 Important Tasks
             </h2>
             <div class="blue-line grid-item"></div>
             {{#each imptasks}}
-                <div class="task grid-item" onclick="viewTask()">
+                <div class="task grid-item">
                     {{!-- <input type="checkbox" class="checkbox-round"> --}}
                     <img id="impcheckbox" class="checkbox" src="/images/checkbox-empty.png">
                     <h3 id="taskname" class="task-name grid-item">{{taskName}}</h3>

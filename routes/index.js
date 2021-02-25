@@ -1,4 +1,5 @@
-var database = require('../public/database/database.json');
+var database = require('../public/database/test.json');
+var fs = require('fs');
 
 /*
  * GET home page.
@@ -34,3 +35,13 @@ exports.view = function(req, res) {
 // 	var user = database.json(request.params.id);
 // 	console.log(user);
 // }
+
+exports.deleteTask = function(req, res) {
+	console.log(req.body);
+	let users = JSON.stringify(req.body);
+	fs.writeFileSync('./public/database/test.json', users);
+	// res.end();
+	res.send("saved!");
+	// res.render('index', database.users[0]);
+    // document.location.href = "/";
+}

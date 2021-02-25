@@ -47,6 +47,8 @@ app.get('/signup', signup.view);
 app.get('/shop', shop.view);
 app.post('/purchaseplant', shop.purchasedPlant);
 
+app.post('/checkofftask', index.deleteTask);
+
 app.get('/garden', garden.view);
 // app.get('/:username/', index.userInfo);
 // Example route
