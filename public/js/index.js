@@ -44,7 +44,7 @@ $(document).ready(function() {
  */
 function initializePage() {
     $(".task").click(displayPopup);
-    $(".checkbox").click(deleteTask);
+    // $(".checkbox").click(displayPopup);
     // $("#impcheckbox").click(deleteTask);
     // $("#regcheckbox").click(deleteTask);
     modal = document.getElementById("myModal");
