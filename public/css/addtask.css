@@ -84,3 +84,10 @@ input[type=date] {
     color: #e2264d;
     will-change: font-size;
 }
+
+p {
+    font-family: "Rubik";
+    margin: 1px;
+    font-size: 14px;
+    color: #5AAAAF;
+}

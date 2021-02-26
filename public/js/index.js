@@ -51,7 +51,7 @@ function initializePage() {
     span = document.getElementsByClassName("close")[0];
     viewBtn = document.getElementById("viewBtn");
     checkBtn = document.getElementById("checkBtn");
-    console.log(modal);
+    // console.log(modal);
     // console.log(btn);
     // console.log(span);
     // console.log(window);
@@ -70,17 +70,44 @@ function loadDatabase() {
 
 function displayPopup(e) {
     console.log("displayPopup");
-    task = e.currentTarget.children[1].innerText;
-    modal.children[0].children[1].children[0].innerText = task;
+    console.log(modal.children[0].children);
+    task = e.currentTarget.children[1].innerHTML;
+    modal.children[0].children[2].innerText = task;
+
+
+    let imp = false;
+    for (var t in database[0].imptasks) {
+        if (database[0].imptasks[t].taskName == task) {
+            modal.children[0].children[3].innerHTML = "Desc: " + database[0].imptasks[t].taskDesc;
+            imp = true;
+            break;
+        }
+    }
+    if (!imp) {
+        for (var t in database[0].regtasks) {
+            if (database[0].regtasks[t].taskName == task) {
+                modal.children[0].children[3].innerHTML = "Desc: " + database[0].regtasks[t].taskDesc;
+                break;
+            }
+        }
+    }
+
     modal.style.display = "block";
+    e.currentTarget.children[0].src = "/images/checkbox-filled.png";
 }
 
 function closePopup(e) {
+    for (var i=0; i<document.getElementsByClassName("checkbox").length; i++) {
+        document.getElementsByClassName("checkbox")[i].src = "/images/checkbox-empty.png";
+    }
     modal.style.display = "none";
 }
 
 function hidePopup(e) {
     if (e.target == modal) {
+        for (var i=0; i<document.getElementsByClassName("checkbox").length; i++) {
+            document.getElementsByClassName("checkbox")[i].src = "/images/checkbox-empty.png";
+        }
         modal.style.display = "none";
     }
 }
@@ -116,7 +143,7 @@ function deleteTask(e) {
                 data: jsonFile,
                 success: function(data) {
                     console.log(jsonFile);
-                    // location.reload();
+                    location.reload();
                     console.log("Checked off task successfully!");
                 }
             });

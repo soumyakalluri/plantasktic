@@ -69,10 +69,11 @@ function saveTask(e) {
             success: function(data, res) {
                 console.log("Updated JSON: ");
                 console.log(dataJSON);
-                // document.location.href = "/";
+                location.reload();
             }
         });
         alert("Task saved! Hit cancel to go to home page!");
+        // document.location.href = "/";
     }
 
 }

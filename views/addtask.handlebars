@@ -25,7 +25,8 @@
     <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form-->
     <form class="addTaskForm" id="addTaskForm">
         <label for="taskName">Task Name:</label>
-        <input type="text" id="taskName" name="task_name" placeholder="Task">
+        <p>Max length: 27 characters</p>
+        <input type="text" id="taskName" name="task_name" placeholder="Task" maxlength="27">
         
         <label for="taskDescription">Task Description:</label>
         <textarea type="text" class="taskDescription" id="taskDescription" name="task_description" placeholder="Description"></textarea>
