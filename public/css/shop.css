@@ -74,7 +74,6 @@ li a {
     margin-left: 20px;
     display: inline;
     color:  black;
-    margin-right: 100px;
 }
 
 .plant-cost {
@@ -167,18 +166,3 @@ li a {
     left: 0;
     display: none;
 }
-
-/* .plant-item > .buyButtonContainer {
-    /* display: inline; */
-    /* display: inline; */
-    /* color: black; */
-    /* overflow: hidden; */
-/* } */
-
-/* .hideThese {
-    display: none;
-    visibility: hidden;
-    position: absolute;
-    overflow: hidden;
-    transform: scale(0);
-} */

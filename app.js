@@ -15,7 +15,8 @@ var login = require('./routes/login');
 var signup = require('./routes/signup');
 var shop = require('./routes/shop');
 var garden = require('./routes/garden');
-var database = require('./public/database/database.json');
+var viewtask = require('./routes/viewtask');
+// var database = require('./public/database/database.json');
 
 // initialize app
 var app = express();
@@ -36,10 +37,12 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', index.view);
+
 app.get('/addtask', addtask.view);
-app.post('addedTask', function(req, res) {
-  console.log(req);
-})
+app.post('/addedTask', addtask.addedTask);
+
+app.get('/viewtask', viewtask.view);
+
 app.get('/error', error.view);
 app.get('/login', login.view);
 app.get('/signup', signup.view);
@@ -61,5 +64,5 @@ if ('development' == app.get('env')) {
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
-  console.log(database);
+  // console.log(database);
 });

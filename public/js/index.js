@@ -57,7 +57,7 @@ function initializePage() {
     // console.log(window);
     $(span).click(closePopup);
     $(window).click(hidePopup);
-    $(viewBtn).click(viewTask);
+    // $(viewBtn).click(viewTask);
     $(checkBtn).click(deleteTask);
 }
 
@@ -93,16 +93,21 @@ function viewTask(e) {
 
 function deleteTask(e) {
     e.preventDefault();
+    var importantTask = false;
     // console.log(database[0].imptasks);
 
     for (var t in database[0].imptasks) {
         // console.log(t);
         if (database[0].imptasks[t].taskName == task) {
             console.log("deleted task!");
+
+            importantTask = true;
+
             database[0].imptasks.splice(t, 1);
             // delete database[0].imptasks[t];
 
             jsonFile.users = database;
+            jsonFile.users[0].coins = parseInt(jsonFile.users[0].coins) + 5;
             // console.log("this is updated user tasks");
             // console.log(jsonFile.users);
             $.ajax({
@@ -132,6 +137,7 @@ function deleteTask(e) {
                 // delete database[0].imptasks[t];
 
                 jsonFile.users = database;
+                jsonFile.users[0].coins = parseInt(jsonFile.users[0].coins) + 3;
                 // console.log("this is updated user tasks");
                 // console.log(jsonFile.users);
                 $.ajax({
@@ -159,6 +165,12 @@ function deleteTask(e) {
     console.log(database);
 
     modal.style.display = "none";
+
+    if ( importantTask ) {
+        alert("You've earned +5 coins!");
+    } else {
+        alert("You've earned +3 coins!");
+    }
     // window.location.href = "/";
     // document.location.href = "/";
 }

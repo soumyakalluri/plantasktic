@@ -1,5 +1,5 @@
 var database = require('../public/database/plantinventory.json');
-var userDatabase = require('../public/database/database.json');
+var userDatabase = require('../public/database/test.json');
 var fs = require('fs');
 
 /*
@@ -14,7 +14,7 @@ exports.view = function(req, res){
         var plant = database.plants[idx];
         plantInventory.push(plant);
     }
-    console.log("Finished loading inventory: " + plantInventory);
+    // console.log("Finished loading inventory: " + plantInventory);
 
 	res.render('shop', database);
 };
@@ -23,7 +23,7 @@ exports.purchasedPlant = function(req, res) {
     console.log(req.body);
     let users = JSON.stringify(req.body);
     fs.writeFileSync('./public/database/test.json', users);
-    // res.send("Saved!");
     res.end();
     // res.render('garden', database);
+    res.redirect('../garden');
 }

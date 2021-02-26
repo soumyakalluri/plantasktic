@@ -27,14 +27,9 @@ function initializePage() {
 }
 
 function loadDatabase() {
-    $.getJSON('../../database/database.json', function(data) {
+    $.getJSON('../../database/test.json', function(data) {
         database = data.users[0];
         dataJSON = data;
-    //     var dataLength = data.length;
-    //     for ( var i = 0; i < dataLength; i++ ) {
-    //         var obj = data.users[i];
-    //         database.push(obj);
-    //     }
         console.log(data);
         document.getElementById("amountOfCoins").innerText = "Coins: " + database['coins'];
     });
@@ -42,18 +37,16 @@ function loadDatabase() {
 
 function buyPlant(e) {
     e.preventDefault();
-    console.log(e.currentTarget.children);
+    // console.log(e.currentTarget.children);
 
-    var plantInfo = (e.currentTarget.children[0].innerText).split("/");
+    var plantInfo = e.currentTarget.children[0].innerText;
     console.log(plantInfo);
 
+    var plantImg = plantInfo.replace(/\s+/g, '-').toLowerCase();
 
     var hasPlant = false;
-    console.log("safdjdslkfjdslfjsdfsdlkfjsdlkfjflskdfjsdlkfsjdflksdfj");
-    console.log(database['plants']);
-    console.log("First plant by user:" + database['plants'][0]['plantName']);
     for ( var i = 0; i < database['plants'].length; i++ ) {
-        if (database['plants'][i]['plantName'] == plantInfo[1]) {
+        if (database['plants'][i]['plantName'] == plantInfo) {
             hasPlant = true;
             break;
         }
@@ -63,39 +56,34 @@ function buyPlant(e) {
     console.log(costItems);
 
     if (parseInt(database['coins']) < parseInt(costItems[1])) {
-        console.log("coins: " + database['coins']);
+        // console.log("coins: " + database['coins']);
         document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You do not have enough coins!";
         document.getElementsByClassName("purchaseConfirmation")[0].style.color = "red";
     } else if (hasPlant) {
-        document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You already have a " + plantInfo[0] + "!";
+        document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You already have a " + plantInfo + "!";
         document.getElementsByClassName("purchaseConfirmation")[0].style.color = "red";
     } else {
         database['coins'] = database['coins'] - costItems[1];
         document.getElementById("amountOfCoins").innerText = "Coins: " + database['coins'];
 
-        document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You purchased a " + plantInfo[0] + "!";
+        document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You purchased a " + plantInfo + "!";
         document.getElementsByClassName("purchaseConfirmation")[0].style.color = "black";
         
-        database.plants.push({'srcImg': plantInfo[1], 'plantName': plantInfo[0]});
+        database.plants.push({'srcImg': plantImg, 'plantName': plantInfo});
         dataJSON.users[0] = database;
+        // console.log(dataJSON);
         $.ajax({
             type: 'POST',
             url: '/purchaseplant',
             data: dataJSON,
             success: function(data) {
+                console.log("Updated JSON: ");
                 console.log(dataJSON);
                 console.log("Purchased plant successfully!");
-                // location.reload();
             }
         });
-        // window.location.href = '/garden';
     }
-    // console.log(JSON.stringify(database));
-    console.log(database);
-    // $.post("purchaseplant", database, function(request, result) {
-    //         console.log("Purchased plant successfully!");
-    //     }
-    // );
+    // console.log(database);
     modal.style.display = "block";
 }
 
@@ -107,21 +95,10 @@ function buyPlantTwo(e) {
 function closePopUp(e) {
     e.preventDefault();
     modal.style.display = "none";
-    // $.post("purchasedPlant", database, function(result) {
-    //     console.log("Purchased plant successfully!");
-    // });
 }
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
 
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
-        // $.post("purchasedPlant", database, function(result) {
-        //     console.log("Purchased plant successfully!");
-        // });
     }
 }

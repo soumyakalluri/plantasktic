@@ -1,8 +1,10 @@
 'use strict';
+var dataJSON = {};
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+    loadDatabase();
 })
 
 /*
@@ -10,6 +12,13 @@ $(document).ready(function() {
  */
 function initializePage() {
     $("#save").click(saveTask);
+}
+
+function loadDatabase() {
+    $.getJSON('../../database/test.json', function(data) {
+        dataJSON = data;
+        console.log(data);
+    });
 }
 
 function saveTask(e) {
@@ -43,18 +52,28 @@ function saveTask(e) {
         document.getElementById("taskDescription").value = "";
         document.getElementById("completeBy").value = "";
         document.getElementById("favoriteButton").checked = false;
-        $.post('addedTask', task, function(req, res) {
-            console.log("Added task");
-            document.location.href = "/";
+
+        if ( task['favorite'] == true ) {
+            (dataJSON.users[0]['imptasks']).push(task);
+            console.log(dataJSON.users[0]['imptasks']);
+        } else {
+            (dataJSON.users[0]['regtasks']).push(task);
+            console.log(dataJSON.users[0]['regtasks']);
+        }
+
+        console.log(dataJSON.users[0]['regtasks']);
+        $.ajax({
+            type: 'POST',
+            url: '/addedTask',
+            data: dataJSON,
+            success: function(data, res) {
+                console.log("Updated JSON: ");
+                console.log(dataJSON);
+                // document.location.href = "/";
+            }
         });
+        alert("Task saved! Hit cancel to go to home page!");
     }
 
 }
 
-function callBackFn(result) {
-    console.log(result);
-    var taskHTML = '<div class="task grid-item" onclick="viewTask()">' +
-                    '<img id="impcheckbox" class="checkbox" src="/images/checkbox-empty.png">' +
-                    '<h3 id="taskname" class="task-name grid-item">' + 'Task Name' + '</h3> </div>';
-    $()
-}

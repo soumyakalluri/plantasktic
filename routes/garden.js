@@ -1,4 +1,4 @@
-var database = require('../public/database/database.json');
+var database = require('../public/database/test.json');
 
 /*
  * GET garden page.
