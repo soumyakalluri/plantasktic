@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantasktic</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <!-- favicon stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    
+    {{!-- <link href="css/bootstrap.css" rel="stylesheet"> --}}
+	{{!-- <link href="css/bootstrap-theme.css"rel="stylesheet"> --}}
+    <link rel="stylesheet" href="../css/login.css">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="module" src="/js/login.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="loginHeader">Login</h1>
+
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="user_name" placeholder="username">
+
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="pass_word" placeholder="password">
+
+            <input id="loginButton" type="submit" value="Login">
+            <p id="signupLink"><a id="signupLink" href="/signup/">Don't have an account? Sign up here</a></p>
+        </form>
+        <div id="navbar" class="grid-item navbar">
+            <ul>
+                <li>
+                    <a href="/">
+                        <img class="navbar-icon" src="/images/home-icon.png">
+                        <br>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/garden">
+                        <img class="navbar-icon" src="/images/garden-icon.png">
+                        <br>
+                        Garden
+                    </a>
+                </li>
+                <li>
+                    <a href="/addtask">
+                        <img class="navbar-icon" src="/images/addtask-icon.png">
+                        <br>
+                        Add Task 
+                    </a>
+                </li>
+                <li>
+                    <a href="/shop">
+                        <img class="navbar-icon" src="/images/shop-icon.png">
+                        <br>
+                        Shop 
+                    </a>
+                </li>
+                <li>
+                    <a href="/login">
+                        <img class="navbar-icon" src="/images/selected-settings-icon.png">
+                        <br>
+                        Settings 
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

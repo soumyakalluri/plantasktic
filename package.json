@@ -13,9 +13,13 @@
   },
   "dependencies": {
     "express": "3.x",
-    "express3-handlebars": "*"
+    "express3-handlebars": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "nodemon": "2.0.7"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "8.9.x",
+    "nodemon": "2.0.7"
   }
 }

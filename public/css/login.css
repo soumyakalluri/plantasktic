@@ -1,0 +1,115 @@
+body {
+    font-family: "Rubik";
+}
+
+#loginHeader {
+    text-align: center;
+    color: #5AAAAF;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 5px;
+    margin-bottom: 10px;
+    resize: vertical;
+    font-size: 15px;
+    font-family: Rubik, sans-serif;
+}
+
+#loginButton {
+    margin: auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    text-align: center;
+    width: 150px;
+    background-image: linear-gradient(to right, #9CDDC2 0%,  #5AAAAF 100%);
+    color: white;
+    font-weight: bold;
+}
+
+#signupLink {
+    margin: auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    text-align: center;
+    padding-top: 5px;
+    font-size: 12px;
+    color: #5AAAAF;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    padding-bottom: 180px; /* accommodate navbar */
+}
+
+main {
+    display: block;
+    float: left;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+.grid-item {
+    width: 100%;
+    border: 0px solid #949494;
+    font-size: 14px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px; 
+    display: inline;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Rubik";
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: #E5FFF4;
+}
+
+li {
+    float: center;
+    width: 20%;
+}
+
+li a {
+    display: block;
+    color: #545454;
+}
+
+.navbar-icon {
+    height: 55px;
+    width: 55px;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    font-family: var(--main-head-font);
+    width: 100%;
+}

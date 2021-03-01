@@ -1,0 +1,93 @@
+#addTaskHeader {
+    font-family: Rubik, sans-serif;
+    text-align: center;
+    color: #5AAAAF;
+}
+
+label {
+    font-size: 18px;
+    font-family: Rubik, sans-serif;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 5px;
+    margin-bottom: 10px;
+    resize: vertical;
+    font-size: 15px;
+    font-family: Rubik, sans-serif;
+}
+
+input[type=date] {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; 
+    margin-top: 5px;
+    margin-bottom: 10px;
+    resize: vertical;
+    font-size: 15px;
+    font-family: Rubik, sans-serif;
+}
+
+#save, #cancel {
+    display: inline-block;
+    width: 50%;
+    padding: 15px;
+    border: 1px solid #c4c4c4;
+    box-sizing: border-box; 
+    font-size: 25px;
+}
+
+#cancel {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    background-color: white;
+    color: #5AAAAF;
+    font-family: Rubik, sans-serif;
+}
+
+#save {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    background-color: #5AAAAF;
+    color: white;
+    font-family: Rubik, sans-serif;
+}
+
+[id="favoriteButton"] {
+    position: absolute;
+    left: -100vw;
+}
+  
+[for="favoriteButton"] {
+    color: #aab8c2;
+    cursor: pointer;
+    font-size: 25px;
+    align-self: center;  
+    transition: color 0.2s ease-in-out;
+}
+    
+[for="favoriteButton"]::selection {
+    color: none;
+    background: transparent;
+}
+  
+[id="favoriteButton"]:checked + label {
+    color: #e2264d;
+    will-change: font-size;
+}
+
+p {
+    font-family: "Rubik";
+    margin: 1px;
+    font-size: 14px;
+    color: #5AAAAF;
+}

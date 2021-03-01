@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantasktic</title>
+
+    <!-- favicon stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" type="text/css" href="/css/shop.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/shop.js"></script>
+
+</head>
+<body class="genformat">
+    <div class="container">
+        <h1 id="shopHeader">Shop</h1>
+        <h2 id="amountOfCoins">Coins: 10</h2> 
+
+        {{#each plants}}
+            <div id="plant-item plantItem" class="plant-item inventory-container">
+                <h3 id="plantName" class="plant-name inventory-item">{{plantName}}</h3>
+                <h3 class="plant-cost inventory-item">Cost: {{cost}}</h3>
+                <div id="buyButtonContainer">
+                    <input id="buyButton" class="buyButton" type="button" value="Buy">
+                    <p id="buyPlant">{{plantName}}/{{srcImg}}</p>
+                    <p id="buyCost">{{cost}}</p>
+                    {{!-- </input> --}}
+                    {{!-- <div id="hideThese"> --}}
+                        {{!-- <p id="buyPlant">{{plantName}}</p>
+                        <p id="buyCost">{{cost}}</p> --}}
+                    {{!-- </div> --}}
+                </div>
+            </div>
+        {{/each}}
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="purchaseConfirmation">You purchased</p>
+            </div>
+        </div>
+
+        <!-- navigation bar -->
+        <div id="navbar" class="grid-item navbar">
+            <ul>
+                <li>
+                    <a href="/">
+                        <img class="navbar-icon" src="/images/home-icon.png">
+                        <br>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/garden">
+                        <img class="navbar-icon" src="/images/garden-icon.png">
+                        <br>
+                        Garden
+                    </a>
+                </li>
+                <li>
+                    <a href="/addtask">
+                        <img class="navbar-icon" src="/images/addtask-icon.png">
+                        <br>
+                        Add Task 
+                    </a>
+                </li>
+                <li>
+                    <a href="/shop">
+                        <img class="navbar-icon" src="/images/selected-shop-icon.png">
+                        <br>
+                        Shop 
+                    </a>
+                </li>
+                <li>
+                    <a href="/login">
+                        <img class="navbar-icon" src="/images/settings-icon.png">
+                        <br>
+                        Settings 
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</html>

@@ -1,0 +1,19 @@
+{
+    "plants": [
+        {
+            "plantName": "Blue Rose",
+            "srcImg": "blue-rose",
+            "cost": 5
+        },
+        {
+            "plantName": "White Rose",
+            "srcImg": "white-rose",
+            "cost": 15
+        },
+        {
+            "plantName": "Red Rose",
+            "srcImg": "red-rose",
+            "cost": 15
+        }
+    ]
+}
