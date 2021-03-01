@@ -57,21 +57,23 @@ function buyPlant(e) {
 
     if (parseInt(database['coins']) < parseInt(costItems[1])) {
         // console.log("coins: " + database['coins']);
-        document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You do not have enough coins!";
+        // document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You do not have enough coins!";
+        $(".purchaseConfirmation").html("<p class=\"purchaseConfirmation\">You do not have enough coins!</p>");
         document.getElementsByClassName("purchaseConfirmation")[0].style.color = "red";
     } else if (hasPlant) {
-        document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You already have a " + plantInfo + "!";
+        // document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You already have a " + plantInfo + "!";
+        $(".purchaseConfirmation").html("<p class=\"purchaseConfirmation\">You already have a " + plantInfo + "!</p>");
         document.getElementsByClassName("purchaseConfirmation")[0].style.color = "red";
     } else {
         database['coins'] = database['coins'] - costItems[1];
         document.getElementById("amountOfCoins").innerText = "Coins: " + database['coins'];
 
-        document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You purchased a " + plantInfo + "!";
+        // document.getElementsByClassName("purchaseConfirmation")[0].innerText = "You purchased a " + plantInfo + "!";
+        $(".purchaseConfirmation").html("<p class=\"purchaseConfirmation\">You purchased a " + plantInfo + "!</p>");
         document.getElementsByClassName("purchaseConfirmation")[0].style.color = "black";
         
         database.plants.push({'srcImg': plantImg, 'plantName': plantInfo});
         dataJSON.users[0] = database;
-        // console.log(dataJSON);
         $.ajax({
             type: 'POST',
             url: '/purchaseplant',
