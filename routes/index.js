@@ -1,6 +1,7 @@
 var database = require('../public/database/test.json');
 var fs = require('fs');
-
+var url  = require('url');
+var userToLookFor = "soumya";
 /*
  * GET home page.
  */
@@ -9,7 +10,7 @@ exports.view = function(req, res) {
 	// First item in the database will be a default one that we will fall back on when users enter a username not found
 	
 	// TODO: Fix the userToLookFor
-	var userToLookFor = "soumya";
+	// var userToLookFor = "soumya";
 	var userName;
 	console.log("Finding user...")
 	for ( var idx in database.users) {
@@ -30,12 +31,6 @@ exports.view = function(req, res) {
 	res.render('index', userName);
 };
 
-// exports.userInfo = function(request, response) {
-// 	console.log("this is the response in index.js" + request.params.id);
-// 	var user = database.json(request.params.id);
-// 	console.log(user);
-// }
-
 exports.deleteTask = function(req, res) {
 	console.log(req.body);
 	let users = JSON.stringify(req.body);
@@ -44,4 +39,32 @@ exports.deleteTask = function(req, res) {
 	res.send("saved!");
 	// res.render('index', database.users[0]);
     // document.location.href = "/";
+}
+
+exports.loadUser = function(request, response) {
+	console.log("this is the response in index.js" + request.path);
+	var pathURL = request.path.split('/');
+	userToLookFor = pathURL[2];
+	console.log(userToLookFor);
+
+	var userName;
+	console.log("Finding user...")
+	for ( var idx in database.users) {
+		var user = database.users[idx];
+		if (user['username'] == userToLookFor) {
+			console.log("Found user: " + userToLookFor);
+			userName = user;
+		}
+	}
+
+	// If null, default it 
+	if ( userName == null ) {
+		console.log("User: " + userToLookFor + " is not found in database, will default now");
+		// userName = database.users[0];
+	}
+
+	console.log("Passing to render: ", userName);
+	response.render('index', userName);
+	// response.send({redirect: '/home'});
+	// response.redirect('/home');
 }

@@ -16,7 +16,6 @@ var signup = require('./routes/signup');
 var shop = require('./routes/shop');
 var garden = require('./routes/garden');
 var viewtask = require('./routes/viewtask');
-// var database = require('./public/database/database.json');
 
 // initialize app
 var app = express();
@@ -36,24 +35,24 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', index.view);
+app.get('/', login.view);
+app.get('/signup', signup.view);
+
+app.get('/home', index.view);
+app.get('/home/:user', index.loadUser);
 
 app.get('/addtask', addtask.view);
-app.post('/addedTask', addtask.addedTask);
+// app.post('/addedTask', addtask.addedTask);
+app.post('/checkofftask', index.deleteTask);
 
 app.get('/viewtask', viewtask.view);
 
 app.get('/error', error.view);
-app.get('/login', login.view);
-app.get('/signup', signup.view);
 
 app.get('/shop', shop.view);
 app.post('/purchaseplant', shop.purchasedPlant);
 
-app.post('/checkofftask', index.deleteTask);
-
 app.get('/garden', garden.view);
-// app.get('/:username/', index.userInfo);
 // Example route
 // app.get('/users', user.list);
 
@@ -64,5 +63,4 @@ if ('development' == app.get('env')) {
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
-  // console.log(database);
 });

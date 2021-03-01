@@ -7,7 +7,7 @@ body {
     color: #5AAAAF;
 }
 
-input[type=text], select, textarea {
+input[type=text], input[type=password], select, textarea {
     width: 100%;
     padding: 5px;
     border: 1px solid #c4c4c4;
@@ -112,4 +112,11 @@ li a {
     background-color: white;
     font-family: var(--main-head-font);
     width: 100%;
+}
+
+.loginError {
+    display: none;
+    font-size: 12px;
+    text-align: center;
+    color: red;
 }

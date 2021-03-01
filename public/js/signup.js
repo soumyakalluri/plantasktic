@@ -24,5 +24,5 @@ function initializePage() {
 
 function signup(e) {
     e.preventDefault();
-    document.location.href = "/";
+    document.location.href = "/home";
 }
