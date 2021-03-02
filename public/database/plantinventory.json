@@ -1,19 +1,34 @@
 {
     "plants": [
         {
-            "plantName": "Blue Rose",
-            "srcImg": "blue-rose",
-            "cost": 5
-        },
-        {
             "plantName": "White Rose",
             "srcImg": "white-rose",
-            "cost": 15
+            "cost": 5
         },
         {
             "plantName": "Red Rose",
             "srcImg": "red-rose",
-            "cost": 15
+            "cost": 5
+        },
+        {
+            "plantName": "Yellow Rose",
+            "srcImg": "yellow-rose",
+            "cost": 5
+        },
+        {
+            "plantName": "Pink Rose",
+            "srcImg": "pink-rose",
+            "cost": 10
+        },
+        {
+            "plantName": "Black Rose",
+            "srcImg": "black-rose",
+            "cost": 10
+        },
+        {
+            "plantName": "Blue Rose",
+            "srcImg": "blue-rose",
+            "cost": 20
         }
     ]
 }
