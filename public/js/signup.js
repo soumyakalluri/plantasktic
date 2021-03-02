@@ -66,7 +66,9 @@ function signup(e) {
         data: database,
         success: function(data, res) {
             console.log("Successfully signed up!");
-            document.location.href = "/home/" + userToCheck;
+            setTimeout(function() {
+                document.location.href = "/home/" + userToCheck;
+            }, 75);
         }
     });
 

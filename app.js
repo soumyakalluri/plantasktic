@@ -16,6 +16,7 @@ var signup = require('./routes/signup');
 var shop = require('./routes/shop');
 var garden = require('./routes/garden');
 var viewtask = require('./routes/viewtask');
+var profile = require('./routes/profile');
 
 // initialize app
 var app = express();
@@ -38,22 +39,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', login.view);
 app.get('/signup', signup.view);
 
-app.get('/home', index.view);
+// app.get('/home', index.view);
 app.get('/home/:user', index.loadUser);
 app.post('/home/:user', index.saveUser);
 
 app.get('/addtask/:user', addtask.view);
-// app.post('/addedTask/:user', addtask.addedTask);
-app.post('/checkofftask', index.deleteTask);
+// app.post('/checkofftask', index.deleteTask);
 
 app.get('/viewtask', viewtask.view);
 
 app.get('/error', error.view);
 
-app.get('/shop', shop.view);
-app.post('/purchaseplant', shop.purchasedPlant);
+app.get('/shop/:user', shop.view);
+app.post('/purchasedPlant/:user', shop.purchasedPlant);
 
-app.get('/garden', garden.view);
+app.get('/garden/:user', garden.view);
+
+app.get('/profile/:user', profile.view);
 // Example route
 // app.get('/users', user.list);
 

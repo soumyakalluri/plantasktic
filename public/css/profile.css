@@ -89,40 +89,6 @@ li a {
     color: #545454;
 }
 
-.task {
-    display: block;
-    background-color: white;
-    opacity: 0.85;
-    color: #474747;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    border-radius: 5px; /* Rounded borders */
-    box-shadow: 0 4px 8px 0 rgba(150, 150, 150, 0.25), 0 6px 20px 0 rgba(150, 150, 150, 0.25);
-    height: 50px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    align-items: left;
-    text-align: left;
-}
-
-.checkbox {
-    padding-top: 13px;
-    padding-bottom: 13px;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: left;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.task-name {
-    font-size: 20px;
-    font-family: "Rubik";
-    color: #474747;
-    text-align: left;
-}
-
 .navbar-icon {
     height: 55px;
     width: 55px;
@@ -134,22 +100,6 @@ li a {
     background-color: white;
     font-family: var(--main-head-font);
     width: 100%;
-}
-
-.checkbox-round {
-    width: 1.3em;
-    height: 1.3em;
-    background-color: white;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.checkbox-round:checked {
-    background-color: gray;
 }
 
 /* The Modal (background) */
@@ -191,6 +141,21 @@ li a {
     cursor: pointer;
 }
 
-#del-task {
-    font-size: 16px;
+.user-card {
+    padding: 15px;
+    display: block;
+    border-radius: 5px; /* Rounded borders */
+    box-shadow: 0 4px 8px 0 rgba(150, 150, 150, 0.25), 0 6px 20px 0 rgba(150, 150, 150, 0.25);
+    background-color: #E5FFF4;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #545454;
+}
+
+.user-name {
+    margin: 0px;
+    display: inline;
+    color: #545454;
 }

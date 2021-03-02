@@ -1,6 +1,6 @@
 'use strict';
 var database = [];
-$.getJSON('../database/database.json', function(data) {
+$.getJSON('../database/test.json', function(data) {
     database = data.users;
 });
 
@@ -45,7 +45,9 @@ function login(e) {
                     url: '/home/' + userToCheck,
                     success: function(data, res) {
                         console.log("Successfully logged in!");
-                        document.location.href = "/home";
+                        setTimeout(function() {
+                            document.location.href = "/home/" + userToCheck;
+                        }, 75);
                     }
                 });
                 return;

@@ -22,7 +22,7 @@
         <h1 id="shopHeader">Shop</h1>
         <h2 id="amountOfCoins">Coins: 10</h2> 
 
-        {{#each plants}}
+        {{#each plantInventory.plants}}
             <div id="plant-item plantItem" class="plant-item inventory-container">
                 <h3 id="plantName" class="plant-name inventory-item">{{plantName}}</h3>
                 <h3 class="plant-cost inventory-item">Cost: {{cost}}</h3>
@@ -57,28 +57,28 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/garden">
+                    <a href="/garden/{{username}}">
                         <img class="navbar-icon" src="/images/garden-icon.png">
                         <br>
                         Garden
                     </a>
                 </li>
                 <li>
-                    <a href="/addtask">
+                    <a href="/addtask/{{username}}">
                         <img class="navbar-icon" src="/images/addtask-icon.png">
                         <br>
                         Add Task 
                     </a>
                 </li>
                 <li>
-                    <a href="/shop">
+                    <a href="/shop/{{username}}">
                         <img class="navbar-icon" src="/images/selected-shop-icon.png">
                         <br>
                         Shop 
                     </a>
                 </li>
                 <li>
-                    <a href="/login">
+                    <a href="/profile/{{username}}">
                         <img class="navbar-icon" src="/images/settings-icon.png">
                         <br>
                         Settings 
