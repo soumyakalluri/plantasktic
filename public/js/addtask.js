@@ -1,5 +1,7 @@
 'use strict';
 var dataJSON = {};
+var username;
+var userIdx;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -13,12 +15,15 @@ $(document).ready(function() {
 function initializePage() {
     console.log(document.location.href);
     $("#save").click(saveTask);
+    $("#cancel").click(cancelTask);
 }
 
 function loadDatabase() {
     $.getJSON('../../database/test.json', function(data) {
         dataJSON = data;
         console.log(data);
+        username = retrieveUsername();
+        userIdx = retrieveUserIndex(username);
     });
 }
 
@@ -42,16 +47,13 @@ function saveTask(e) {
         console.error("Task name is required. Please enter a task name.");
         alert("Please enter a task name.");
     } else {
-        // Save to database
-        var username = retrieveUsername();
-        var userIdx = retrieveUserIndex(username);
-
         // Clear fields
         document.getElementById("taskName").value = "";
         document.getElementById("taskDescription").value = "";
         document.getElementById("completeBy").value = "";
         document.getElementById("favoriteButton").checked = false;
 
+        // Save to database
         if ( task['favorite'] == true ) {
             if (dataJSON.users[userIdx]['imptasks'] == null) {
                 dataJSON.users[userIdx]['imptasks'] = [];
@@ -79,6 +81,11 @@ function saveTask(e) {
         });
     }
 
+}
+
+function cancelTask(e) {
+    e.preventDefault();
+    document.location.href = "/home/" + username;
 }
 
 function retrieveUsername() {

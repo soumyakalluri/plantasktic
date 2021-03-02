@@ -22,7 +22,7 @@
 <body class="genformat">
 
     <div class="grid-container">
-        <h1 class="title">My Garden + {{username}}</h1>
+        <h1 class="title">My Garden</h1>
 
         <div class="garden">
             {{#each plants}}
@@ -42,21 +42,21 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/garden">
+                    <a href="/garden/{{username}}">
                         <img class="navbar-icon" src="/images/selected-garden-icon.png">
                         <br>
                         Garden
                     </a>
                 </li>
                 <li>
-                    <a href="/addtask">
+                    <a href="/addtask/{{username}}">
                         <img class="navbar-icon" src="/images/addtask-icon.png">
                         <br>
                         Add Task 
                     </a>
                 </li>
                 <li>
-                    <a href="/shop">
+                    <a href="/shop/{{username}}">
                         <img class="navbar-icon" src="/images/shop-icon.png">
                         <br>
                         Shop 
