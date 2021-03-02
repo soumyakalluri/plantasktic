@@ -113,3 +113,10 @@ li a {
     font-family: var(--main-head-font);
     width: 100%;
 }
+
+.signupError {
+    display: none;
+    font-size: 12px;
+    text-align: center;
+    color: red;
+}

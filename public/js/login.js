@@ -2,11 +2,6 @@
 var database = [];
 $.getJSON('../database/database.json', function(data) {
     database = data.users;
-    var dataLength = data.length;
-    for ( var i = 0; i < dataLength; i++ ) {
-        var obj = data.users[i];
-        database.push(obj);
-    }
 });
 
 // Call this function when the page loads (the "ready" event)

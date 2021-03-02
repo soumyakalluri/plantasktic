@@ -65,6 +65,25 @@ exports.loadUser = function(request, response) {
 
 	console.log("Passing to render: ", userName);
 	response.render('index', userName);
-	// response.send({redirect: '/home'});
-	// response.redirect('/home');
+}
+
+exports.saveUser = function(request, response) {
+	var pathURL = request.path.split('/');
+	userToLookFor = pathURL[2];
+	console.log(userToLookFor);
+	
+	let users = JSON.stringify(request.body);
+	fs.writeFileSync('./public/database/test.json', users);
+
+	var userName;
+	console.log("Finding user...")
+	for ( var idx in database.users) {
+		var user = database.users[idx];
+		if (user['username'] == userToLookFor) {
+			console.log("Found user: " + userToLookFor);
+			userName = user;
+		}
+	}
+
+	response.render('index', userName);
 }

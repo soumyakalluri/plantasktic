@@ -40,9 +40,10 @@ app.get('/signup', signup.view);
 
 app.get('/home', index.view);
 app.get('/home/:user', index.loadUser);
+app.post('/home/:user', index.saveUser);
 
-app.get('/addtask', addtask.view);
-// app.post('/addedTask', addtask.addedTask);
+app.get('/addtask/:user', addtask.view);
+// app.post('/addedTask/:user', addtask.addedTask);
 app.post('/checkofftask', index.deleteTask);
 
 app.get('/viewtask', viewtask.view);
