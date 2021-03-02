@@ -3,31 +3,35 @@
     src: "https://fonts.googleapis.com/css2?family=Rubik&display=swap"
 }
 
-html, body {
+html {
     margin: 0;
     height: 100%;
+    /* background-image: linear-gradient(#5AAAAF, #9CDDC2); */
 }
 
 .genformat {
     align-items: center;
     text-align: left;
     width: auto;
-    background-image: linear-gradient(#5AAAAF, #9CDDC2);
     color: white;
     font-family: "Rubik";
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
-main {
+#main {
     display: block;
     float: left;
+    /* margin-bottom: 15px; */
+    /* height: 5px; */
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: auto;
-    padding: 0px;
+    padding: 0px 0px 85px 0px;
+    background-image: linear-gradient(#5AAAAF, #9CDDC2);
     margin: 0px;
 }
 
@@ -115,9 +119,6 @@ li a {
     font-size: 20px;
     font-family: "Rubik";
     color: #474747;
-    /* padding-top: 13px;
-    padding-bottom: 13px; */
-    /* padding-left: 10px; */
     text-align: left;
 }
 
@@ -125,28 +126,6 @@ li a {
     height: 55px;
     width: 55px;
 }
-
-/* .garden-icon {
-    height: 45px;
-    width: 45px;
-}
-
-
-.addtask-icon {
-    height: 55px;
-    width: 55px;
-}
-
-
-.shop-icon {
-    height: 55px;
-    width: 55px;
-}
-
-.settings-icon {
-    height: 55px;
-    width: 55px;
-} */
 
 .navbar {
     position: fixed;
