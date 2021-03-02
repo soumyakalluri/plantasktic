@@ -22,7 +22,7 @@
 <body class="genformat">
 
     <div class="grid-container">
-        <h1 class="title">My Garden</h1>
+        <h1 class="title">My Garden + {{username}}</h1>
 
         <div class="garden">
             {{#each plants}}
@@ -35,7 +35,7 @@
         <div id="navbar" class="grid-item navbar">
             <ul>
                 <li>
-                    <a href="/home">
+                    <a href="/home/{{username}}">
                         <img class="navbar-icon" src="/images/home-icon.png">
                         <br>
                         Home
