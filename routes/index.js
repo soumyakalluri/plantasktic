@@ -48,7 +48,9 @@ exports.loadUser = function(request, response) {
 	console.log(userToLookFor);
 
 	var userName;
-	console.log("Finding user...")
+	console.log("Finding user... ");
+	// uncomment below line to make code work on localhost
+	// console.log(database);
 	for ( var idx in database.users) {
 		var user = database.users[idx];
 		if (user['username'] == userToLookFor) {

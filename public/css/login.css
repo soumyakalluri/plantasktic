@@ -22,8 +22,6 @@ input[type=text], input[type=password], select, textarea {
 
 #loginButton {
     margin: auto;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     display: flex;
     justify-content: center;
     padding: 15px;
@@ -39,8 +37,6 @@ input[type=text], input[type=password], select, textarea {
 
 #signupLink {
     margin: auto;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     text-align: center;
     padding-top: 5px;
     font-size: 12px;
@@ -79,39 +75,6 @@ main {
     text-align: center;
     font-size: 40px;
     font-family: "Rubik";
-}
-
-ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 5px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    background-color: #E5FFF4;
-}
-
-li {
-    float: center;
-    width: 20%;
-}
-
-li a {
-    display: block;
-    color: #545454;
-}
-
-.navbar-icon {
-    height: 55px;
-    width: 55px;
-}
-
-.navbar {
-    position: fixed;
-    bottom: 0;
-    background-color: white;
-    font-family: var(--main-head-font);
-    width: 100%;
 }
 
 .loginError {

@@ -150,7 +150,9 @@ function deleteTask(e) {
                     data: jsonFile,
                     success: function(data) {
                         console.log(jsonFile);
+
                         location.reload();
+
                         console.log("Checked off task successfully!");
                     }
                 });
@@ -175,7 +177,6 @@ function deleteTask(e) {
     } else {
         alert("You've earned +3 coins!");
     }
-
 }
 
 function retrieveUsername() {

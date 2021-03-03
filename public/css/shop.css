@@ -23,17 +23,26 @@ html, body {
     align-items: center;
     text-align: left;
     width: auto;
-    background-image: linear-gradient(#5AAAAF, #9CDDC2);
     color: white;
     font-family: "Rubik";
     margin: 0;
     padding: 0;
 }
 
+.background {
+    margin: 0;
+    min-height: 800px;
+    background-image: linear-gradient(#5AAAAF, #9CDDC2);
+}
+
+#main {
+    display: block;
+    float: left;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto;
-    padding: 0px;
     margin: 0px;
 }
 

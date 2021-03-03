@@ -18,73 +18,77 @@
 
 </head>
 <body class="genformat">
-    <div class="container">
-        <h1 id="shopHeader">Shop</h1>
-        <h2 id="amountOfCoins">Coins: 10</h2> 
+    <div class="background">
+        <div class="grid-container">
+            <h1 id="shopHeader">Shop</h1>
+            <h2 id="amountOfCoins">Coins: 10</h2> 
 
-        {{#each plantInventory.plants}}
-            <div id="plant-item plantItem" class="plant-item inventory-container">
-                <h3 id="plantName" class="plant-name inventory-item">{{plantName}}</h3>
-                <h3 class="plant-cost inventory-item">Cost: {{cost}}</h3>
-                <div id="buyButtonContainer">
-                    <input id="buyButton" class="buyButton" type="button" value="Buy">
-                    <p id="buyPlant">{{plantName}}/{{srcImg}}</p>
-                    <p id="buyCost">{{cost}}</p>
-                    {{!-- </input> --}}
-                    {{!-- <div id="hideThese"> --}}
-                        {{!-- <p id="buyPlant">{{plantName}}</p>
-                        <p id="buyCost">{{cost}}</p> --}}
-                    {{!-- </div> --}}
+            {{#each plantInventory.plants}}
+                <div id="plant-item plantItem" class="plant-item inventory-container">
+                    <h3 id="plantName" class="plant-name inventory-item">{{plantName}}</h3>
+                    <h3 class="plant-cost inventory-item">Cost: {{cost}}</h3>
+                    <div id="buyButtonContainer">
+                        <input id="buyButton" class="buyButton" type="button" value="Buy">
+                        <p id="buyPlant">{{plantName}}/{{srcImg}}</p>
+                        <p id="buyCost">{{cost}}</p>
+                        {{!-- </input> --}}
+                        {{!-- <div id="hideThese"> --}}
+                            {{!-- <p id="buyPlant">{{plantName}}</p>
+                            <p id="buyCost">{{cost}}</p> --}}
+                        {{!-- </div> --}}
+                    </div>
+                </div>
+            {{/each}}
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p class="purchaseConfirmation">You purchased</p>
                 </div>
             </div>
-        {{/each}}
 
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p class="purchaseConfirmation">You purchased</p>
+            <!-- navigation bar -->
+            <div id="navbar" class="grid-item navbar">
+                <ul>
+                    <li>
+                        <a href="/home/{{username}}">
+                            <img class="navbar-icon" src="/images/home-icon.png">
+                            <br>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/garden/{{username}}">
+                            <img class="navbar-icon" src="/images/garden-icon.png">
+                            <br>
+                            Garden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/addtask/{{username}}">
+                            <img class="navbar-icon" src="/images/addtask-icon.png">
+                            <br>
+                            Add Task 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/shop/{{username}}">
+                            <img class="navbar-icon" src="/images/selected-shop-icon.png">
+                            <br>
+                            Shop 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/profile/{{username}}">
+                            <img class="navbar-icon" src="/images/settings-icon.png">
+                            <br>
+                            Settings 
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-
-        <!-- navigation bar -->
-        <div id="navbar" class="grid-item navbar">
-            <ul>
-                <li>
-                    <a href="/home/{{username}}">
-                        <img class="navbar-icon" src="/images/home-icon.png">
-                        <br>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/garden/{{username}}">
-                        <img class="navbar-icon" src="/images/garden-icon.png">
-                        <br>
-                        Garden
-                    </a>
-                </li>
-                <li>
-                    <a href="/addtask/{{username}}">
-                        <img class="navbar-icon" src="/images/addtask-icon.png">
-                        <br>
-                        Add Task 
-                    </a>
-                </li>
-                <li>
-                    <a href="/shop/{{username}}">
-                        <img class="navbar-icon" src="/images/selected-shop-icon.png">
-                        <br>
-                        Shop 
-                    </a>
-                </li>
-                <li>
-                    <a href="/profile/{{username}}">
-                        <img class="navbar-icon" src="/images/settings-icon.png">
-                        <br>
-                        Settings 
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
+
+</body>
 </html>
