@@ -45,7 +45,7 @@ function loadDatabase() {
     $.getJSON('../database/test.json', function(data) {
         database = data.users;
         jsonFile = data;
-        console.log(jsonFile);
+        // console.log(jsonFile);
         username = retrieveUsername();
         userIdx = retrieveUserIndex(username);
     });
@@ -121,7 +121,7 @@ function deleteTask(e) {
                 url: '/home/' + username,
                 data: jsonFile,
                 success: function(data) {
-                    console.log(jsonFile);
+                    // console.log(jsonFile);
                     location.reload();
                     console.log("Checked off task successfully!");
                 }
@@ -149,7 +149,7 @@ function deleteTask(e) {
                     url: '/home/' + username,
                     data: jsonFile,
                     success: function(data) {
-                        console.log(jsonFile);
+                        // console.log(jsonFile);
 
                         location.reload();
 
@@ -168,7 +168,7 @@ function deleteTask(e) {
     } else {
         console.log("could not delete task");
     }
-    console.log(database);
+    // console.log(database);
 
     modal.style.display = "none";
 

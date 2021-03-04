@@ -10,7 +10,7 @@ $(document).ready(function() {
 function loadDatabase() {
     $.getJSON('../../database/test.json', function(data) {
         database = data;
-        console.log(data);
+        // console.log(data);
     });
 }
 
@@ -58,7 +58,7 @@ function signup(e) {
 
     database.users.push(newUser);
     console.log("Pushed new user into database");
-    console.log(database);
+    // console.log(database);
 
     $.ajax({
         type: 'POST',

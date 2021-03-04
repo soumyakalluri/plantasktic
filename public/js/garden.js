@@ -21,6 +21,6 @@ function loadDatabase() {
     $.getJSON('../../database/test.json', function(data) {
         database = data.users[0];
         dataJSON = data;
-        console.log(data);
+        // console.log(data);
     });
 }

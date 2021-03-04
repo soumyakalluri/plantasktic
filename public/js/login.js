@@ -26,7 +26,7 @@ function login(e) {
         return;
     }
 
-    console.log(database);
+    // console.log(database);
 	console.log("Finding user..." + userToCheck);
 	for ( var i=0; i<database.length; i++) {
 		var user = database[i];

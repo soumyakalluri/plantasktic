@@ -21,7 +21,7 @@ function initializePage() {
 function loadDatabase() {
     $.getJSON('../../database/test.json', function(data) {
         dataJSON = data;
-        console.log(data);
+        // console.log(data);
         username = retrieveUsername();
         userIdx = retrieveUserIndex(username);
     });
@@ -59,16 +59,16 @@ function saveTask(e) {
                 dataJSON.users[userIdx]['imptasks'] = [];
             }
             (dataJSON.users[userIdx]['imptasks']).push(task);
-            console.log(dataJSON.users[userIdx]['imptasks']);
+            // console.log(dataJSON.users[userIdx]['imptasks']);
         } else {
             if (dataJSON.users[userIdx]['regtasks'] == null) {
                 dataJSON.users[userIdx]['regtasks'] = [];
             }
             (dataJSON.users[userIdx]['regtasks']).push(task);
-            console.log(dataJSON.users[userIdx]['regtasks']);
+            // console.log(dataJSON.users[userIdx]['regtasks']);
         }
 
-        console.log(dataJSON.users[userIdx]['regtasks']);
+        // console.log(dataJSON.users[userIdx]['regtasks']);
         $.ajax({
             type: 'POST',
             url: '/home/' + username,

@@ -30,7 +30,7 @@ function initializePage() {
 function loadDatabase() {
     $.getJSON('../../database/test.json', function(data) {
         dataJSON = data;
-        console.log(data);
+        // console.log(data);
         userIdx = retrieveUserIndex(username);
         document.getElementById("amountOfCoins").innerText = "Coins: " + database['coins'];
     });
@@ -49,8 +49,8 @@ function buyPlant(e) {
     var plantImg = plantInfo.replace(/\s+/g, '-').toLowerCase();
 
     var hasPlant = false;
-    console.log(dataJSON);
-    console.log(database);
+    // console.log(dataJSON);
+    // console.log(database);
     for ( var i = 0; i < database['plants'].length; i++ ) {
         if (database['plants'][i]['plantName'] == plantInfo) {
             hasPlant = true;
@@ -82,7 +82,7 @@ function buyPlant(e) {
             data: dataJSON,
             success: function(data) {
                 console.log("Updated JSON: ");
-                console.log(dataJSON);
+                // console.log(dataJSON);
                 console.log("Purchased plant successfully!");
             }
         });

@@ -16,7 +16,7 @@ function initializePage() {
 function loadDatabase() {
     $.getJSON('../../database/test.json', function(data) {
         dataJSON = data;
-        console.log(data);
+        // console.log(data);
     });
 }
 

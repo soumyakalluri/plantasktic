@@ -37,7 +37,7 @@ function loadDatabase() {
     $.getJSON('../../database/test.json', function(data) {
         database = data.users[0];
         dataJSON = data;
-        console.log(data);
+        // console.log(data);
     });
 }
 
@@ -59,7 +59,7 @@ function hidePopup(e) {
 }
 
 function logout() {
-    console.log(dataJSON);
+    // console.log(dataJSON);
     setTimeout(function() {
         document.location.href = "/";
     }, 100);
