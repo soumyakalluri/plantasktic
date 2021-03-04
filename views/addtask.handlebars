@@ -38,11 +38,24 @@
         <!-- Reference: https://codepen.io/sunny-lella/pen/dXkLjb -->
         <label>Important:</label>
         <input type="checkbox" id="favoriteButton" name="favorite-button">
-        <label for="favoriteButton" id="heartIcon">❤</label>
+        <label for="favoriteButton" id="heartIcon" onclick="toggleHeart()">🤍</label>
 
         <input id="cancel" type="button" value="Cancel">
         <input id="save" type="submit" value="Save">
     </form>
+
+    <script>
+        function toggleHeart() {
+            var heart = document.getElementById("heartIcon");
+            console.log("toggleHeart called");
+            if (heart.innerHTML == "🤍") {
+                console.log("heart matched");
+                heart.innerHTML = "❤️";
+            } else {
+                heart.innerHTML = "🤍";
+            }
+        }
+    </script>
     
 </body>
 </html>
