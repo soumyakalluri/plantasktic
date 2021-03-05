@@ -22,6 +22,9 @@
 <body class="genformat">
 
     <div class="background">
+
+        <img id="helpButtonImg" src="/images/help_icon.png">
+
         <div class="grid-container">
             <h1 class="title">My Tasks</h1>
 
@@ -38,6 +41,18 @@
                         <p id="del-task-desc"></p>
                         {{!-- <button id="viewBtn">View/Edit</button> --}}
                         <button id="checkBtn">Check Off</button>
+                    </div>
+                    
+                </div>
+
+                <!-- Help Modal -->
+                <div id="myHelpModal" class="helpModal">
+
+                    <!-- Modal content -->
+                    <div class="help-modal-content">
+                        <span id="help-close">&times;</span>
+                        <h3>How to use our app:</h3>
+                        <p id="help-desc"></p>
                     </div>
                     
                 </div>
