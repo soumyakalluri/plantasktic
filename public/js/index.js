@@ -5,15 +5,18 @@ var jsonFile = {};
 
 // Get the modal
 var modal;
+var helpModal;
 
 // Get the button that opens the modal
 var btn;
 var viewBtn;
 var checkBtn;
+var helpBtn;
 
 // Get the <span> element that closes the modal
 var span;
 var task;
+var helpSpan;
 
 // Hold the username and userIdx in the database
 var username;
@@ -35,10 +38,17 @@ function initializePage() {
     span = document.getElementsByClassName("close")[0];
     viewBtn = document.getElementById("viewBtn");
     checkBtn = document.getElementById("checkBtn");
+    helpModal = document.getElementById("myHelpModal");
+    helpBtn = document.getElementById("helpButtonImg");
+    helpSpan = document.getElementById("help-close");
+    
+    $(helpBtn).click(displayHelpPopup);
 
     $(span).click(closePopup);
     $(window).click(hidePopup);
     $(checkBtn).click(deleteTask);
+    $(helpSpan).click(hideHelpPopup);
+    $(window).click(hideHelpPopup);
 }
 
 function loadDatabase() {
@@ -197,4 +207,21 @@ function retrieveUserIndex(username) {
     }
     console.log("Index of username is: " + index);
     return index;
+}
+
+function displayHelpPopup(e) {
+    var helpDesc = helpModal.children[0].children[2];
+
+    helpDesc.innerHTML = "This app is to help you stay motivated to complete your tasks.<br><br>As you "
+                        + "complete tasks, you will receive coins, and you can use those coins to purchase flowers to populate their garden!"
+                        + "<br><br>You can start by adding some tasks under the \"Add Task\" button. As you check them off, see if you can populate"
+                        + " your garden with the flowers in the shop! :)";
+
+    helpModal.style.display = "block";
+}
+
+function hideHelpPopup(e) {
+    if (e.target == helpSpan) {
+        helpModal.style.display = "none";
+    }
 }
