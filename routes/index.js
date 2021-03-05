@@ -38,7 +38,7 @@ exports.deleteTask = function(req, res) {
 	// res.end();
 	res.send("saved!");
 	// res.render('index', database.users[0]);
-    // document.location.href = "/";
+    document.location.href = "/";
 }
 
 exports.loadUser = function(request, response) {

@@ -1,4 +1,5 @@
 'use strict';
+
 var dataJSON = {};
 var username;
 var userIdx;
@@ -27,26 +28,38 @@ function loadDatabase() {
     });
 }
 
+function cleanString(str) {
+    var output = DOMPurify.sanitize(str[0].value);
+    output = output.trim();
+    return output;
+}
+
 function saveTask(e) {
     e.preventDefault();
     var form = $(this).closest(".addTaskForm");
     var taskName = $(form).find("#taskName");
-    var taskDesc = $(form).find("#taskDescription");
-    var dateCompleteBy = $(form).find("#completeBy");
 
-    var task = {
-        "taskName": taskName.val(),
-        "taskDesc": taskDesc.val(),
-        "taskDate": dateCompleteBy.val(),
-        "favorite": document.getElementById("favoriteButton").checked
-    };
-
-    console.log(task);
-
-    if (taskName.val() == "") {
+    if (taskName[0].value == "") {
         console.error("Task name is required. Please enter a task name.");
         alert("Please enter a task name.");
     } else {
+
+        taskName = cleanString(taskName);
+        var taskDesc = $(form).find("#taskDescription");
+        taskDesc = cleanString(taskDesc);
+
+        var dateCompleteBy = $(form).find("#completeBy");
+
+        var task = {
+            "taskName": taskName,
+            "taskDesc": taskDesc,
+            "taskDate": dateCompleteBy.val(),
+            "favorite": document.getElementById("favoriteButton").checked
+        };
+
+        console.log(task);
+
+
         // Clear fields
         document.getElementById("taskName").value = "";
         document.getElementById("taskDescription").value = "";

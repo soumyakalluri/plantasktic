@@ -83,3 +83,10 @@ main {
     text-align: center;
     color: red;
 }
+
+#length-label {
+    font-family: "Rubik";
+    margin: 1px;
+    font-size: 14px;
+    color: #5AAAAF;
+}

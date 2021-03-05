@@ -8,7 +8,7 @@ var data;
  * GET shop page.
  */
 exports.view = function(req, res){
-	console.log(database);
+	// console.log(database);
     
     var pathURL = req.path.split('/');
 	userToLookFor = pathURL[2];
@@ -19,7 +19,7 @@ exports.view = function(req, res){
         'username': userToLookFor
     };
 
-    console.log(data);
+    // console.log(data);
 
 	res.render('shop', data);
 };
@@ -30,7 +30,7 @@ exports.purchasedPlant = function(req, res) {
     fs.writeFileSync('./public/database/test.json', users);
 
 	console.log(userToLookFor);
-    console.log(data);
+    // console.log(data);
 
     res.render('shop', data);
 }
