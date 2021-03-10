@@ -13,6 +13,8 @@
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
     <link rel="stylesheet" type="text/css" href="/css/addtask.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js" integrity="sha512-rXAHWSMciPq2KsOxTvUeYNBb45apbcEXUVSIexVPOBnKfD/xo99uUe5M2OOsC49hGdUrkRLYsATkQQHMzUo/ew==" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/addtask.js"></script>
 
@@ -38,11 +40,22 @@
         <!-- Reference: https://codepen.io/sunny-lella/pen/dXkLjb -->
         <label>Important:</label>
         <input type="checkbox" id="favoriteButton" name="favorite-button">
-        <label for="favoriteButton" id="heartIcon">❤</label>
+        <label for="favoriteButton" id="heartIcon" onclick="toggleHeart()">🤍</label>
 
-        <input id="cancel" type="button" value="Cancel" onclick="location.href='/'">
+        <input id="cancel" type="button" value="Cancel">
         <input id="save" type="submit" value="Save">
     </form>
+
+    <script>
+        function toggleHeart() {
+            var heart = document.getElementById("heartIcon");
+            if (heart.innerHTML == "🤍") {
+                heart.innerHTML = "❤️";
+            } else {
+                heart.innerHTML = "🤍";
+            }
+        }
+    </script>
     
 </body>
 </html>

@@ -12,10 +12,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/images/favicon/site.webmanifest">
     
-    {{!-- <link href="css/bootstrap.css" rel="stylesheet"> --}}
-	{{!-- <link href="css/bootstrap-theme.css"rel="stylesheet"> --}}
+    <link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.css"rel="stylesheet">
     <link rel="stylesheet" href="../css/signup.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js" integrity="sha512-rXAHWSMciPq2KsOxTvUeYNBb45apbcEXUVSIexVPOBnKfD/xo99uUe5M2OOsC49hGdUrkRLYsATkQQHMzUo/ew==" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/signup.js"></script>
 
@@ -26,54 +27,18 @@
 
         <form id="signupForm">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="user_name" placeholder="username">
+            <p id="length-label">Max length: 25 characters</p>
+            <input type="text" id="username" name="user_name" placeholder="username" maxlength="25">
 
             <label for="password">Password:</label>
-            <input type="text" id="password" name="pass_word" placeholder="password">
+            <input type="password" id="password" name="pass_word" placeholder="password">
 
-            <div class="divSignupButton">
-                <input id="signupButton" type="submit" value="Sign Up">
-                <p id="loginLink"><a id="loginLink" href="/login/">Already have an account? Login here</a></p>
-            </div>    
+            <input id="signupButton" type="submit" value="Sign Up">
+            <p id="loginLink"><a id="loginLink" href="/">Already have an account? Login here</a></p>
         </form>
-                <div id="navbar" class="grid-item navbar">
-            <ul>
-                <li>
-                    <a href="/">
-                        <img class="navbar-icon" src="/images/home-icon.png">
-                        <br>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/garden">
-                        <img class="navbar-icon" src="/images/garden-icon.png">
-                        <br>
-                        Garden
-                    </a>
-                </li>
-                <li>
-                    <a href="/addtask">
-                        <img class="navbar-icon" src="/images/addtask-icon.png">
-                        <br>
-                        Add Task 
-                    </a>
-                </li>
-                <li>
-                    <a href="/shop">
-                        <img class="navbar-icon" src="/images/shop-icon.png">
-                        <br>
-                        Shop 
-                    </a>
-                </li>
-                <li>
-                    <a href="/login">
-                        <img class="navbar-icon" src="/images/selected-settings-icon.png">
-                        <br>
-                        Settings 
-                    </a>
-                </li>
-            </ul>
+
+        <div class="signupError">
+            <p id="signupErrorText">There seems to be an account associated with this user. Please login.</p>
         </div>
     </div>
 </body>

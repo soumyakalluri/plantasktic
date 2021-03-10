@@ -10,45 +10,46 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/images/favicon/site.webmanifest">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
-    <link rel="stylesheet" type="text/css" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+        rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="/js/shop.js"></script>
+    <script src="/js/profile.js"></script>
 
 </head>
 <body class="genformat">
+
     <div class="background">
         <div class="grid-container">
-            <h1 id="shopHeader">Shop</h1>
-            <h2 id="amountOfCoins">Coins: 0</h2> 
+            <h1 class="title">My Profile</h1>
 
-            {{#each plantInventory.plants}}
-                <div id="plant-item plantItem" class="plant-item inventory-container">
-                    <h3 id="plantName" class="plant-name inventory-item">{{plantName}}</h3>
-                    <h3 class="plant-cost inventory-item">Cost: {{cost}}</h3>
-                    <div id="buyButtonContainer">
-                        <input id="buyButton" class="buyButton" type="button" value="Buy">
-                        <p id="buyPlant">{{plantName}}/{{srcImg}}</p>
-                        <p id="buyCost">{{cost}}</p>
-                        {{!-- </input> --}}
-                        {{!-- <div id="hideThese"> --}}
-                            {{!-- <p id="buyPlant">{{plantName}}</p>
-                            <p id="buyCost">{{cost}}</p> --}}
-                        {{!-- </div> --}}
+            <main id="main" class="grid-item" style="margin-bottom: 15px;">
+
+                <div id="user-card" class="user-card">
+                    <img class="user-pic" src="/images/user-pic.png">
+                    <br>
+                    <h3>Hi, {{username}}!</h3> 
+                    <button id="user-logout">Logout</button>
+                    <p>Thanks for using Plantasktic :)</p>
+                </div>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Would you like to log out now?</h3>
+                        <p id="log-user">Currently logged in as: {{username}}</p>
+                        <button id="cancelBtn">Cancel</button>
+                        <button id="logoutBtn">Logout</button>
                     </div>
+                    
                 </div>
-            {{/each}}
-            <br><br><br><br><br>
 
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p class="purchaseConfirmation">You purchased</p>
-                </div>
-            </div>
-
-            <!-- navigation bar -->
+            </main>
             <div id="navbar" class="grid-item navbar">
                 <ul>
                     <li>
@@ -74,22 +75,25 @@
                     </li>
                     <li>
                         <a href="/shop/{{username}}">
-                            <img class="navbar-icon" src="/images/selected-shop-icon.png">
+                            <img class="navbar-icon" src="/images/shop-icon.png">
                             <br>
                             Shop 
                         </a>
                     </li>
                     <li>
                         <a href="/profile/{{username}}">
-                            <img class="navbar-icon" src="/images/settings-icon.png">
+                            <img class="navbar-icon" src="/images/selected-settings-icon.png">
                             <br>
                             Settings 
                         </a>
                     </li>
                 </ul>
             </div>
+            <div style="padding-bottom:85px"><br></div>
         </div>
+
     </div>
+
 
 </body>
 </html>

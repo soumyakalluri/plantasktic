@@ -1,19 +1,99 @@
 {
     "plants": [
         {
-            "plantName": "Blue Rose",
-            "srcImg": "blue-rose",
-            "cost": 5
-        },
-        {
             "plantName": "White Rose",
             "srcImg": "white-rose",
-            "cost": 15
+            "cost": 5
         },
         {
             "plantName": "Red Rose",
             "srcImg": "red-rose",
+            "cost": 5
+        },
+        {
+            "plantName": "Yellow Rose",
+            "srcImg": "yellow-rose",
+            "cost": 5
+        },
+        {
+            "plantName": "White Tulip",
+            "srcImg": "white-tulip",
+            "cost": 5
+        },
+        {
+            "plantName": "Yellow Tulip",
+            "srcImg": "yellow-tulip",
+            "cost": 5
+        },
+        {
+            "plantName": "White Cremon",
+            "srcImg": "white-cremon",
+            "cost": 5
+        },
+        {
+            "plantName": "Red Cremon",
+            "srcImg": "red-cremon",
+            "cost": 5
+        },
+        {
+            "plantName": "Yellow Cremon",
+            "srcImg": "yellow-cremon",
+            "cost": 5
+        },
+        {
+            "plantName": "Pink Rose",
+            "srcImg": "pink-rose",
+            "cost": 10
+        },
+        {
+            "plantName": "Black Rose",
+            "srcImg": "black-rose",
+            "cost": 10
+        },
+        {
+            "plantName": "Pink Tulip",
+            "srcImg": "pink-tulip",
+            "cost": 10
+        },
+        {
+            "plantName": "Pink Cremon",
+            "srcImg": "pink-cremon",
+            "cost": 10
+        },
+        {
+            "plantName": "Blue Cremon",
+            "srcImg": "blue-cremon",
             "cost": 15
+        },
+        {
+            "plantName": "Blue Rose",
+            "srcImg": "blue-rose",
+            "cost": 20
+        },
+        {
+            "plantName": "Purple Tulip",
+            "srcImg": "purple-tulip",
+            "cost": 20
+        },
+        {
+            "plantName": "Purple Cremon",
+            "srcImg": "purple-cremon",
+            "cost": 20
+        },
+        {
+            "plantName": "Green Cremon",
+            "srcImg": "green-cremon",
+            "cost": 50
+        },
+        {
+            "plantName": "May Bells",
+            "srcImg": "lily-valley",
+            "cost": 100
+        },
+        {
+            "plantName": "Gold Rose",
+            "srcImg": "gold-rose",
+            "cost": 500
         }
     ]
 }

@@ -1,67 +1,70 @@
 {
-    "users" : [
+    "users": [
         {
-            "username": "soumya",
+            "username": "kelly",
             "password": "1234",
-            "coins": 126,
-            "imptasks": [
+            "coins": "206",
+            "plants": [
                 {
-                    "taskName": "Complete COGS 120 A6",
-                    "taskDesc": "finsh implementing home screen and complete writeup",
-                    "taskDate": "2021-02-23",
-                    "important": true
+                    "srcImg": "blue-rose",
+                    "plantName": "Blue Rose"
                 },
                 {
-                    "taskName": "Do PSYC 161 user testing",
-                    "taskDesc": "meeting at 4pm",
-                    "taskDate": "2021-02-24",
-                    "important": true
+                    "srcImg": "white-rose",
+                    "plantName": "White Rose"
+                },
+                {
+                    "srcImg": "red-rose",
+                    "plantName": "Red Rose"
+                },
+                {
+                    "srcImg": "pink-rose",
+                    "plantName": "Pink Rose"
                 }
             ],
             "regtasks": [
                 {
-                    "taskName": "Catch up on CSE lectures",
-                    "taskDesc": "finish watching cse 134b lectures",
-                    "taskDate": "2021-02-22",
-                    "important": false
+                    "taskName": "help popup",
+                    "taskDesc": "make a help popup",
+                    "taskDate": "",
+                    "favorite": "false"
                 },
                 {
-                    "taskName": "Complete COGS 101B padlet",
-                    "taskDesc": "write about implicit memory",
-                    "taskDate": "2021-02-22",
-                    "important": false
+                    "taskName": "add flowers to database",
+                    "taskDesc": "",
+                    "taskDate": "",
+                    "favorite": "false"
                 },
                 {
-                    "taskName": "Finish COGS 101B ZAPS",
-                    "taskDesc": "topic is signal testing",
-                    "taskDate": "2021-02-23",
-                    "important": false
-                },
-                {
-                    "taskName": "Draft email to club members",
-                    "taskDesc": "schedule for 8am",
-                    "taskDate": "2021-02-24",
-                    "important": false
+                    "taskName": "fix logout button styling",
+                    "taskDesc": "",
+                    "taskDate": "",
+                    "favorite": "false"
                 }
-            ],
-            "plants": 
-            [ 
-                {
-                    "srcImg":"blue-rose",
-                    "plantName": "Blue Rose"
-                } 
             ]
         },
         {
-            "username": "kelly",
+            "username": "soumya",
             "password": "5678",
-            "coins": 11,
+            "coins": "18",
             "imptasks": [
                 {
                     "taskName": "do hw",
                     "taskDesc": "cogs 120 hw",
                     "taskDate": "2021-02-21T18:25:43.511Z",
-                    "important": false
+                    "important": "false"
+                },
+                {
+                    "taskName": "eat asparagus",
+                    "taskDesc": "check your pee",
+                    "taskDate": "",
+                    "favorite": "true"
+                },
+                {
+                    "taskName": "make matcha",
+                    "taskDesc": "color has to be #c5e8cc",
+                    "taskDate": "2021-03-03",
+                    "favorite": "true"
                 }
             ],
             "regtasks": [
@@ -69,27 +72,93 @@
                     "taskName": "go poo",
                     "taskDesc": "don't forget to go poopoo",
                     "taskDate": "2021-02-21T18:25:43.511Z",
-                    "important": true
+                    "important": "true"
+                },
+                {
+                    "taskName": "make a tiktok",
+                    "taskDesc": "dance to bts",
+                    "taskDate": "2021-03-03",
+                    "favorite": "false"
+                },
+                {
+                    "taskName": "work on cogs 120",
+                    "taskDesc": "kelly is free after 9pm staff meeting",
+                    "taskDate": "2021-03-03",
+                    "favorite": "false"
                 }
             ],
-            "plants": 
-            [ 
-                { 
-                    "srcImg":"red-rose",
+            "plants": [
+                {
+                    "srcImg": "red-rose",
                     "plantName": "Red Rose"
                 },
                 {
-                    "srcImg":"yellow-rose",
+                    "srcImg": "yellow-rose",
                     "plantName": "Yellow Rose"
                 },
                 {
-                    "srcImg":"white-rose",
+                    "srcImg": "white-rose",
                     "plantName": "White Rose"
                 },
                 {
-                    "srcImg":"blue-rose",
+                    "srcImg": "blue-rose",
                     "plantName": "Blue Rose"
-                } 
+                },
+                {
+                    "srcImg": "white-tulip",
+                    "plantName": "White Tulip"
+                }
+            ]
+        },
+        {
+            "username": "aaa",
+            "password": "d",
+            "coins": "0"
+        },
+        {
+            "username": "b",
+            "password": "s",
+            "coins": "0"
+        },
+        {
+            "username": "c",
+            "password": "d",
+            "coins": "0"
+        },
+        {
+            "username": "lokll",
+            "password": "ssss",
+            "coins": "0"
+        },
+        {
+            "username": "admin",
+            "password": "admin",
+            "coins": "59",
+            "plants": [
+                {
+                    "srcImg": "white-rose",
+                    "plantName": "White Rose"
+                },
+                {
+                    "srcImg": "pink-rose",
+                    "plantName": "Pink Rose"
+                }
+            ],
+            "imptasks": [
+                {
+                    "taskName": "asdfafe",
+                    "taskDesc": "agwrawefawef",
+                    "taskDate": "2021-03-05",
+                    "favorite": "true"
+                }
+            ],
+            "regtasks": [
+                {
+                    "taskName": "awedawefawef",
+                    "taskDesc": "awefawefawefawef",
+                    "taskDate": "",
+                    "favorite": "false"
+                }
             ]
         }
     ]

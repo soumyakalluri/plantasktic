@@ -7,7 +7,7 @@ body {
     color: #5AAAAF;
 }
 
-input[type=text], select, textarea {
+input[type=text], input[type=password], select, textarea {
     width: 100%;
     padding: 5px;
     border: 1px solid #c4c4c4;
@@ -22,8 +22,6 @@ input[type=text], select, textarea {
 
 #loginButton {
     margin: auto;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     display: flex;
     justify-content: center;
     padding: 15px;
@@ -39,8 +37,6 @@ input[type=text], select, textarea {
 
 #signupLink {
     margin: auto;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     text-align: center;
     padding-top: 5px;
     font-size: 12px;
@@ -81,35 +77,16 @@ main {
     font-family: "Rubik";
 }
 
-ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 5px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    background-color: #E5FFF4;
+.loginError {
+    display: none;
+    font-size: 12px;
+    text-align: center;
+    color: red;
 }
 
-li {
-    float: center;
-    width: 20%;
-}
-
-li a {
-    display: block;
-    color: #545454;
-}
-
-.navbar-icon {
-    height: 55px;
-    width: 55px;
-}
-
-.navbar {
-    position: fixed;
-    bottom: 0;
-    background-color: white;
-    font-family: var(--main-head-font);
-    width: 100%;
+#length-label {
+    font-family: "Rubik";
+    margin: 1px;
+    font-size: 14px;
+    color: #5AAAAF;
 }

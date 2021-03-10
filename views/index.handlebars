@@ -21,92 +21,112 @@
 </head>
 <body class="genformat">
 
-    <div class="grid-container">
-        <h1 class="title">My Tasks</h1>
+    <div class="background">
 
-        <div id="navbar" class="grid-item navbar">
-            <ul>
-                <li>
-                    <a href="/">
-                        <img class="navbar-icon" src="/images/selected-home-icon.png">
-                        <br>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/garden">
-                        <img class="navbar-icon" src="/images/garden-icon.png">
-                        <br>
-                        Garden
-                    </a>
-                </li>
-                <li>
-                    <a href="/addtask">
-                        <img class="navbar-icon" src="/images/addtask-icon.png">
-                        <br>
-                        Add Task 
-                    </a>
-                </li>
-                <li>
-                    <a href="/shop">
-                        <img class="navbar-icon" src="/images/shop-icon.png">
-                        <br>
-                        Shop 
-                    </a>
-                </li>
-                <li>
-                    <a href="/login">
-                        <img class="navbar-icon" src="/images/settings-icon.png">
-                        <br>
-                        Settings 
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <main class="grid-item">
+        <img id="helpButtonImg" src="/images/help_icon.png">
 
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
+        <div class="grid-container">
+            <h1 class="title">My Tasks</h1>
 
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>Would you like to check off this task?</h3>
-                    <p id="del-task"></p>
-                    <p id="del-task-desc"></p>
-                    {{!-- <button id="viewBtn">View/Edit</button> --}}
-                    <button id="checkBtn">Check Off</button>
+            <main id="main" class="grid-item" style="margin-bottom: 15px;">
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Would you like to check off this task?</h3>
+                        <p id="del-task"></p>
+                        <p id="del-task-desc"></p>
+                        {{!-- <button id="viewBtn">View/Edit</button> --}}
+                        <button id="checkBtn">Check Off</button>
+                    </div>
+                    
                 </div>
-                
+
+                <!-- Help Modal -->
+                <div id="myHelpModal" class="helpModal">
+
+                    <!-- Modal content -->
+                    <div class="help-modal-content">
+                        <span id="help-close">&times;</span>
+                        <h3>How to use our app:</h3>
+                        <p id="help-desc"></p>
+                    </div>
+                    
+                </div>
+
+                <h2 class="task-heading">
+                    <img src="/images/collapsible-icon.png">
+                    Important Tasks
+                </h2>
+                <div class="blue-line grid-item"></div>
+                {{#each imptasks}}
+                    <div class="task grid-item">
+                        {{!-- <input type="checkbox" class="checkbox-round"> --}}
+                        <img id="impcheckbox" class="checkbox" src="/images/checkbox-empty.png">
+                        <h3 id="taskname" class="task-name grid-item">{{taskName}}</h3>
+                    </div>
+                {{/each}}
+
+                <h2 class="task-heading">
+                    <img src="/images/collapsible-icon.png">
+                    Everything else
+                </h2>
+                <div class="blue-line grid-item"></div>
+                {{#each regtasks}}
+                    <div class="task grid-item">
+                        <img id="regcheckbox" class="checkbox" src="/images/checkbox-empty.png">
+                        <h3 id="taskname" class="task-name grid-item">{{taskName}}</h3>
+                    </div>
+                {{/each}}
+
+            </main>
+            <div id="navbar" class="grid-item navbar">
+                <ul>
+                    <li>
+                        <a href="/home/{{username}}">
+                            <img class="navbar-icon" src="/images/selected-home-icon.png">
+                            <br>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/garden/{{username}}">
+                            <img class="navbar-icon" src="/images/garden-icon.png">
+                            <br>
+                            Garden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/addtask/{{username}}">
+                            <img class="navbar-icon" src="/images/addtask-icon.png">
+                            <br>
+                            Add Task 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/shop/{{username}}">
+                            <img class="navbar-icon" src="/images/shop-icon.png">
+                            <br>
+                            Shop 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/profile/{{username}}">
+                            <img class="navbar-icon" src="/images/settings-icon.png">
+                            <br>
+                            Settings 
+                        </a>
+                    </li>
+                </ul>
             </div>
+            <div style="padding-bottom:85px"><br></div>
+        </div>
 
-            <h2 class="task-heading">
-                <img src="/images/collapsible-icon.png">
-                Important Tasks
-            </h2>
-            <div class="blue-line grid-item"></div>
-            {{#each imptasks}}
-                <div class="task grid-item">
-                    {{!-- <input type="checkbox" class="checkbox-round"> --}}
-                    <img id="impcheckbox" class="checkbox" src="/images/checkbox-empty.png">
-                    <h3 id="taskname" class="task-name grid-item">{{taskName}}</h3>
-                </div>
-            {{/each}}
-
-            <h2 class="task-heading">
-                <img src="/images/collapsible-icon.png">
-                Everything else
-            </h2>
-            <div class="blue-line grid-item"></div>
-            {{#each regtasks}}
-                <div class="task grid-item">
-                    <img id="regcheckbox" class="checkbox" src="/images/checkbox-empty.png">
-                    <h3 id="taskname" class="task-name grid-item">{{taskName}}</h3>
-                </div>
-            {{/each}}
-
-        </main>
     </div>
+
 
 </body>
 </html>

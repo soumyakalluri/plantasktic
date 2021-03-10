@@ -21,58 +21,59 @@
 </head>
 <body class="genformat">
 
-    <div class="grid-container">
-        <h1 class="title">My Garden</h1>
+    <div class="background">
+        <div class="grid-container">
+            <h1 class="title">My Garden</h1>
 
-        <div class="garden">
-            {{#each plants}}
-                <div class="plant">
-                    <img class="plant-pic" src="/images/plants/{{srcImg}}.png">
-                    <p class="plant-name">{{plantName}}</p>
-                </div>
-            {{/each}}
+            <div id="main" class="garden grid-item" style="margin-bottom: 15px;">
+                {{#each plants}}
+                    <div class="plant">
+                        <img class="plant-pic" src="/images/plants/{{srcImg}}.png">
+                        <p class="plant-name">{{plantName}}</p>
+                    </div>
+                {{/each}}
+            </div>
+            <div id="navbar" class="grid-item navbar">
+                <ul>
+                    <li>
+                        <a href="/home/{{username}}">
+                            <img class="navbar-icon" src="/images/home-icon.png">
+                            <br>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/garden/{{username}}">
+                            <img class="navbar-icon" src="/images/selected-garden-icon.png">
+                            <br>
+                            Garden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/addtask/{{username}}">
+                            <img class="navbar-icon" src="/images/addtask-icon.png">
+                            <br>
+                            Add Task 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/shop/{{username}}">
+                            <img class="navbar-icon" src="/images/shop-icon.png">
+                            <br>
+                            Shop 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/profile/{{username}}">
+                            <img class="navbar-icon" src="/images/settings-icon.png">
+                            <br>
+                            Settings 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-        <div id="navbar" class="grid-item navbar">
-            <ul>
-                <li>
-                    <a href="/">
-                        <img class="navbar-icon" src="/images/home-icon.png">
-                        <br>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/garden">
-                        <img class="navbar-icon" src="/images/selected-garden-icon.png">
-                        <br>
-                        Garden
-                    </a>
-                </li>
-                <li>
-                    <a href="/addtask">
-                        <img class="navbar-icon" src="/images/addtask-icon.png">
-                        <br>
-                        Add Task 
-                    </a>
-                </li>
-                <li>
-                    <a href="/shop">
-                        <img class="navbar-icon" src="/images/shop-icon.png">
-                        <br>
-                        Shop 
-                    </a>
-                </li>
-                <li>
-                    <a href="/login">
-                        <img class="navbar-icon" src="/images/settings-icon.png">
-                        <br>
-                        Settings 
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-
 
     </div>
 

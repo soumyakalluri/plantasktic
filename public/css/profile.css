@@ -24,6 +24,7 @@ html {
     background-image: linear-gradient(#5AAAAF, #9CDDC2);
 }
 
+
 #main {
     display: block;
     float: left;
@@ -49,6 +50,23 @@ html {
     text-align: center;
     font-size: 40px;
     font-family: "Rubik";
+}
+
+.task-heading {
+    text-align: left;
+    font-size: 24px;
+    font-family: "Rubik";
+    margin: 0px;
+    padding: 5px 25px;
+}
+
+.blue-line {
+    background-color: #5AAAAF;
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    height: 1px;
+    justify-content: center;
 }
 
 ul {
@@ -84,42 +102,60 @@ li a {
     width: 100%;
 }
 
-.garden {
-    padding-bottom: 90px; /* accommodate navbar */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.plant {
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    color:#474747;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.user-card {
+    padding: 15px;
     display: block;
-    background-color: white;
-    opacity: 0.85;
-    color: #474747;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
     border-radius: 5px; /* Rounded borders */
     box-shadow: 0 4px 8px 0 rgba(150, 150, 150, 0.25), 0 6px 20px 0 rgba(150, 150, 150, 0.25);
-    /* height: 50px; */
+    background-color: #E5FFF4;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 5px;
     margin-bottom: 10px;
-    align-items: center;
-    text-align: left;
+    color: #545454;
 }
 
-.plant-pic {
-    padding-top: 13px;
-    /* padding-bottom: 13px; */
-    text-align: left;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.plant-name {
-    font-size: 20px;
-    font-family: "Rubik";
-    color: #474747;
-    /* padding-top: 13px;
-    padding-bottom: 13px; */
-    /* padding-left: 10px; */
-    text-align: center;
+.user-name {
+    margin: 0px;
+    display: inline;
+    color: #545454;
 }
