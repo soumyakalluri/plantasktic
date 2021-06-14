@@ -2,4 +2,4 @@
 
 Group Members: Soumya Kalluri, Kelly Lo
 
-Heroku App Link: plantasktic-webapp.herokuapp.com
+Heroku App Link: [Plantasktic (plantasktic-webapp.herokuapp.com)](plantasktic-webapp.herokuapp.com)
