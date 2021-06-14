@@ -1,4 +1,4 @@
-COGS 120/CSE 170
+##COGS 120/CSE 170
 
 Group Members: Soumya Kalluri, Kelly Lo
 
